@@ -1,0 +1,384 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Matérias, Ensaios & Literatura | Daniel Germano</title>
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('dg_portfolio_theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    <link rel="icon" type="image/png" href="medias/images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-color);
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .form-control {
+            width: 100%;
+            background: var(--card-inner);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            padding: 12px 16px;
+            color: var(--text-color);
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            outline: none;
+            transition: var(--transition);
+        }
+        .form-control:focus {
+            border-color: var(--accent-red);
+            box-shadow: 0 0 10px var(--glow-red);
+        }
+        textarea.form-control {
+            min-height: 100px;
+            resize: vertical;
+        }
+        select.form-control {
+            cursor: pointer;
+        }
+        .output-box {
+            background: var(--code-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            padding: 18px;
+            color: var(--code-text);
+            font-family: 'Consolas', monospace;
+            font-size: 0.88rem;
+            white-space: pre-wrap;
+            word-break: break-all;
+            margin-top: 15px;
+            max-height: 350px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">DG<span>.</span></a>
+            <nav>
+                <a href="index.html#sobre">Sobre</a>
+                <a href="index.html#projetos">Projetos</a>
+                <a href="index.html#editorial">Editorial & Ensaios</a>
+                <a href="index.html#monetizacao">Comissões & Apoio</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-container" style="padding-top: 130px; max-width: 900px;">
+        
+        <div style="margin-bottom: 25px;">
+            <a href="index.html" style="color: var(--accent-red); font-weight: 600;">&larr; Voltar para o Portfólio</a>
+        </div>
+
+        <section class="contact-info-card" style="padding: 35px;">
+            <span class="project-tag">Ferramenta Administrativa Local</span>
+            <h1 style="font-family:'Space Grotesk', sans-serif; font-size: 2rem; margin: 12px 0 20px 0;">Gerador de Matérias, Ensaios & Literatura</h1>
+            <p style="color: var(--text-muted); margin-bottom: 30px;">Crie e baixe rapidamente páginas HTML completas categorizadas como Opinião Pessoal, Jornalismo Esportivo, Pesquisa Científica, Fatos Históricos ou Poemas e Contos.</p>
+
+            <form id="generatorForm">
+                <div class="form-group">
+                    <label for="txtTitulo">1. Título da Obra / Matéria / Ensaio:</label>
+                    <input type="text" id="txtTitulo" class="form-control" placeholder="Ex: A Ilusão da Hiperconectividade e o Silêncio Cognitivo" required>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 15px;">
+                    <div class="form-group">
+                        <label for="selCategoria">2. Categoria Oficial:</label>
+                        <select id="selCategoria" class="form-control">
+                            <option value="opiniao|tag-opiniao|Opinião Pessoal">Opinião Pessoal (Filosofia / Sociedade)</option>
+                            <option value="esportes|tag-esportes|Jornalismo Esportivo">Jornalismo Esportivo (Tática / Crônicas)</option>
+                            <option value="ciencia|tag-ciencia|Pesquisa Científica">Pesquisa Científica (Hipóteses / Dados)</option>
+                            <option value="historia|tag-historia|Fatos Históricos">Fatos Históricos (História / Política)</option>
+                            <option value="literatura|tag-literatura|Poemas e Contos">Poemas e Contos (Poesia / Literatura)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtTempo">3. Tempo de Leitura:</label>
+                        <input type="text" id="txtTempo" class="form-control" placeholder="Ex: 5 min de leitura" value="5 min de leitura">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="txtHipotese" id="lblHipotese">4. Pergunta, Premissa ou Tema Central:</label>
+                    <textarea id="txtHipotese" class="form-control" placeholder="Ex: “A aceleração dos fluxos digitais fragmenta a contemplação filosófica?”" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="txtResumo">5. Resumo para o Feed do index.html (2 ou 3 frases):</label>
+                    <textarea id="txtResumo" class="form-control" placeholder="Breve resumo para quem visualiza a lista no feed principal..." required></textarea>
+                </div>
+
+                <div style="display: flex; gap: 12px; margin-top: 25px; flex-wrap: wrap;">
+                    <button type="submit" class="btn btn-primary">⚡ Gerar & Baixar Arquivo HTML</button>
+                    <button type="button" id="btnCopyCard" class="btn btn-secondary">📋 Copiar Card para index.html</button>
+                </div>
+            </form>
+
+            <div id="outputSection" style="display: none; margin-top: 35px;">
+                <h3 style="font-family:'Space Grotesk', sans-serif; font-size: 1.2rem;">Código do Card para colar no <code>index.html</code> (na seção #editorial):</h3>
+                <div id="cardOutput" class="output-box"></div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 Daniel Germano. Engenharia de Software, Pesquisa & Produção Autoral.</p>
+        </div>
+    </footer>
+
+    <script src="lang.js" defer></script>
+    <script>
+        function slugify(text) {
+            return text.toString().toLowerCase()
+                .replace(/[áàãâä]/g, 'a')
+                .replace(/[éèêë]/g, 'e')
+                .replace(/[íìîï]/g, 'i')
+                .replace(/[óòõôö]/g, 'o')
+                .replace(/[úùûü]/g, 'u')
+                .replace(/[ç]/g, 'c')
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/^-+|-+$/g, '');
+        }
+
+        const form = document.getElementById("generatorForm");
+        const outputSection = document.getElementById("outputSection");
+        const cardOutput = document.getElementById("cardOutput");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const titulo = document.getElementById("txtTitulo").value.trim();
+            const [catSlug, catTagClass, catName] = document.getElementById("selCategoria").value.split("|");
+            const tempo = document.getElementById("txtTempo").value.trim() || "5 min de leitura";
+            const premissa = document.getElementById("txtHipotese").value.trim();
+            const resumo = document.getElementById("txtResumo").value.trim();
+            
+            const dataAtual = new Date().toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' });
+            const slug = "texto-" + slugify(titulo);
+            const fileName = slug + ".html";
+
+            // Card Snippet
+            const cardSnippet = `<!-- Novo Texto: ${titulo} -->
+<article class="article-card" data-editorial-category="${catSlug}">
+    <div>
+        <div class="article-meta">
+            <span>📅 ${dataAtual}</span>
+            <span>⏱️ ${tempo}</span>
+            <span class="project-tag ${catTagClass}">${catName}</span>
+        </div>
+        <h3>${titulo}</h3>
+        
+        <div class="article-thesis-box">
+            <strong>Foco / Premissa:</strong>
+            <p>“${premissa}”</p>
+        </div>
+        <p>${resumo}</p>
+    </div>
+    <div style="margin-top: 20px;">
+        <a href="${fileName}" class="btn btn-primary" data-i18n="editorial-read-btn">Ler Texto Completo &rarr;</a>
+    </div>
+</article>`;
+
+            cardOutput.textContent = cardSnippet;
+            outputSection.style.display = "block";
+
+            // Conteúdo dinâmico da página de acordo com a categoria
+            let corpoConteudo = "";
+            if (catSlug === "literatura") {
+                corpoConteudo = `
+            <div class="poem-container" style="margin: 35px 0;">
+                <div class="poem-stanza">
+                    <span class="poem-verse">Escreva aqui a primeira estrofe do seu poema,</span>
+                    <span class="poem-verse">Com o ritmo das palavras que ecoam no ar,</span>
+                    <span class="poem-verse">Cada verso desenha um novo dilema,</span>
+                    <span class="poem-verse">Que a mente inquieta se põe a desvendar.</span>
+                </div>
+                <div class="poem-stanza">
+                    <span class="poem-verse">Na segunda estrofe, o conto se expande,</span>
+                    <span class="poem-verse">Onde o silêncio da noite comanda.</span>
+                </div>
+            </div>
+
+            <h2>Sobre a Obra & Contexto de Criação</h2>
+            <p>Explique aqui o contexto, inspiração ou reflexão filosófica por trás da criação deste conto ou poema.</p>`;
+            } else if (catSlug === "ciencia") {
+                corpoConteudo = `
+            <div class="article-thesis-box" style="margin: 25px 0;">
+                <strong>Pergunta / Hipótese Investigada:</strong>
+                <p>“${premissa}”</p>
+            </div>
+
+            <h2>1. Introdução & Contexto do Problema</h2>
+            <p>Apresente o estado da arte e a motivação experimental para a análise.</p>
+
+            <blockquote>
+                "Insira aqui uma citação marcante ou premissa essencial."
+            </blockquote>
+
+            <h2>2. Metodologia Experimental & Código</h2>
+            <p>Descreva o método de coleta de dados, ferramentas e arquitetura.</p>
+
+            <div class="code-box">
+# Exemplo de código ou algoritmo
+def executar_teste():
+    return {"status": "validado"}
+            </div>
+
+            <h2>3. Dissecação dos Dados & Resultados</h2>
+            <p>Apresente métricas empíricas e tabelas comparativas.</p>
+
+            <h2>4. Conclusão & Aplicação Prática</h2>
+            <p>Sintetize a resposta definitiva para a hipótese inicial.</p>`;
+            } else {
+                corpoConteudo = `
+            <div class="article-thesis-box" style="margin: 25px 0;">
+                <strong>Premissa & Foco da Análise:</strong>
+                <p>“${premissa}”</p>
+            </div>
+
+            <h2>1. O Ponto de Partida & Contextualização</h2>
+            <p>Apresente a discussão, fato histórico, evento esportivo ou observação social que motivou este texto.</p>
+
+            <blockquote>
+                "Destaque aqui a tese central ou pensamento de maior impacto da sua argumentação."
+            </blockquote>
+
+            <h2>2. Desenvolvimento dos Argumentos & Fatos</h2>
+            <p>Aprofunde a análise com exemplos, fatos documentados, dados estatísticos ou raciocínio filosófico estruturado.</p>
+
+            <h2>3. Conclusão & Considerações Finais</h2>
+            <p>Sintetize o entendimento alcançado e as reflexões que ficam para o leitor.</p>`;
+            }
+
+            // HTML Completo
+            const fullHtml = `<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${titulo} | Daniel Germano</title>
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('dg_portfolio_theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    <\/script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">DG<span>.</span></a>
+            <nav>
+                <a href="index.html#sobre" data-i18n="nav-about">Sobre</a>
+                <a href="index.html#habilidades" data-i18n="nav-skills">Habilidades</a>
+                <a href="index.html#projetos" data-i18n="nav-projects">Projetos</a>
+                <a href="index.html#editorial" data-i18n="nav-editorial" class="active">Editorial & Ensaios</a>
+                <a href="index.html#monetizacao" data-i18n="nav-monetization">Comissões & Apoio</a>
+                <a href="index.html#certificacoes" data-i18n="nav-certs">Certificados</a>
+                <a href="index.html#formacao" data-i18n="nav-edu">Formação</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-container" style="padding-top: 130px; max-width: 900px;">
+        
+        <div style="margin-bottom: 25px;">
+            <a href="index.html#editorial" style="color: var(--accent-red); font-weight: 600;">&larr; Voltar para a lista de textos</a>
+        </div>
+
+        <article class="article-reader-container">
+            
+            <div class="article-meta">
+                <span>📅 ${dataAtual}</span>
+                <span>⏱️ ${tempo}</span>
+                <span class="project-tag ${catTagClass}">${catName}</span>
+                <span>✍️ Por Daniel Germano</span>
+            </div>
+
+            <h1>${titulo}</h1>
+
+            ${corpoConteudo}
+
+            <!-- Caixa de Monetização e Comissões -->
+            <div style="background: var(--card-inner); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 30px; margin-top: 40px; text-align: center;">
+                <span class="project-tag">Apoie Esta Produção Autoral</span>
+                <h3 style="margin: 15px 0 10px 0; font-size: 1.4rem;">Gostou deste texto e quer apoiar ou encomendar um ensaio?</h3>
+                <p style="font-size: 0.95rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 20px auto;">Você pode apoiar a continuidade de meus estudos e criações com qualquer contribuição via Pix ou solicitar um estudo/pesquisa sob medida.</p>
+
+                <div class="pix-copy-box" style="max-width: 500px; margin: 0 auto 20px auto;">
+                    <span class="pix-key-text" style="font-size: 0.88rem;">danielgermano.dev@gmail.com</span>
+                    <button class="btn-copy-pix">Copiar Pix</button>
+                </div>
+
+                <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                    <a href="index.html#monetizacao" class="btn btn-secondary">Ver Planos de Apoio</a>
+                    <a href="https://wa.me/5511966302273?text=Olá+Daniel!+Li+seu+texto+autoral+e+gostaria+de+conversar" target="_blank" class="btn btn-primary">Falar no WhatsApp</a>
+                </div>
+            </div>
+
+        </article>
+
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p data-i18n="footer-text">&copy; 2026 Daniel Germano. Engenharia de Software, Pesquisa & Produção Autoral.</p>
+            <div class="social-links">
+                <a href="https://github.com/DanielGermano-Dev" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/daniel-germano-lima-dos-santos" target="_blank">LinkedIn</a>
+                <a href="mailto:danielgermano.dev@gmail.com">E-mail</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="lang.js" defer><\/script>
+</body>
+</html>`;
+
+            // Download
+            const blob = new Blob([fullHtml], { type: "text/html;charset=utf-8" });
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = fileName;
+            link.click();
+        });
+
+        document.getElementById("btnCopyCard").addEventListener("click", () => {
+            const text = cardOutput.textContent;
+            if (text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    const btn = document.getElementById("btnCopyCard");
+                    const orig = btn.innerText;
+                    btn.innerText = "Copiado! ✓";
+                    setTimeout(() => btn.innerText = orig, 2000);
+                });
+            } else {
+                alert("Por favor, preencha o formulário e clique em Gerar primeiro!");
+            }
+        });
+    </script>
+</body>
+</html>
+

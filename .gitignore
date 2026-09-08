@@ -1,6 +1,3 @@
-# Arquivos locais contendo dados descriptografados
-data/certificates.json
-
 # Arquivos de sistema e IDEs
 .vscode/
 .idea/

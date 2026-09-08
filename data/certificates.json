@@ -48,32 +48,40 @@
         "category": "Inteligência Artificial"
     },
     {
-        "title": "JavaScript Completo",
-        "issuer": "Senac",
-        "date": "2025",
+        "title": "Desenvolvimento Web JavaScript",
+        "issuer": "Senac Santo André",
+        "date": "2024",
         "image": "medias/certificates/certificadosJSSENAC.png",
         "link": "medias/certificates/certificadosJSSENAC.pdf",
-        "category": "Frontend"
+        "category": "Front-End"
     },
     {
         "title": "Proficiência em Inglês (TOEIC)",
-        "issuer": "ETEC Júlio de Mesquita / ETS",
-        "date": "2025",
+        "issuer": "ETEC Júlio de Mesquita",
+        "date": "2023",
         "image": "medias/certificates/CertificadoTOEIC_ETECJM.jpg",
         "link": "medias/certificates/CertificadoTOEIC_ETECJM.jpg",
         "category": "Idiomas"
     },
     {
         "title": "Santander Bootcamp 2026 - Desenvolvimento & IA",
-        "issuer": "DIO & Santander",
+        "issuer": "DIO (Digital Innovation One) e Santander Open Academy",
         "date": "2026",
         "image": "medias/certificates/Certificado1SantanderBootcamp.webp",
         "link": "medias/certificates/Certificado1SantanderBootcamp.webp",
-        "category": "Backend"
+        "category": "Back-End"
+    },
+    {
+        "title": "Santander Open Academy - Introdução ao Desenvolvimento em Java",
+        "issuer": "DIO (Digital Innovation One) e Santander Open Academy",
+        "date": "2026",
+        "image": "medias/certificates/CertificadoIntroducaoJava.pdf",
+        "link": "medias/certificates/CertificadoIntroducaoJava.pdf",
+        "category": "Back-End"
     },
     {
         "title": "Lançamento Santander Bootcamp 2026",
-        "issuer": "DIO & Santander",
+        "issuer": "DIO (Digital Innovation One) e Santander Open Academy",
         "date": "2026",
         "image": "medias/certificates/CertificadoLancamentoBootcampSantander.png",
         "link": "medias/certificates/CertificadoLancamentoBootcampSantander.pdf",

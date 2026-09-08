@@ -1,9 +1,16 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel Germano | Portfólio Técnico</title>
+    <title>Daniel Germano | Portfólio Técnico, Pesquisas & Produção Autoral</title>
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('dg_portfolio_theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    <link rel="icon" type="image/png" href="medias/images/favicon.png">
     <link rel="stylesheet" href="style.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +27,9 @@
                 <a href="#sobre" data-i18n="nav-about">Sobre</a>
                 <a href="#habilidades" data-i18n="nav-skills">Habilidades</a>
                 <a href="#projetos" data-i18n="nav-projects">Projetos</a>
+                <a href="#editorial" data-i18n="nav-editorial">Editorial & Ensaios</a>
+                <a href="#afiliados" data-i18n="nav-affiliates">Loja & Afiliados</a>
+                <a href="#monetizacao" data-i18n="nav-monetization">Comissões & Apoio</a>
                 <a href="#certificacoes" data-i18n="nav-certs">Certificados</a>
                 <a href="#formacao" data-i18n="nav-edu">Formação</a>
             </nav>
@@ -29,12 +39,13 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <span class="hero-tag" data-i18n="hero-tag">Desenvolvedor de Software & Eletrônica</span>
-            <h1 data-i18n="hero-title">Daniel <span>Germano</span></h1>
-            <p data-i18n="hero-desc">Especialista em automação de hardware e software embarcado, resolvendo problemas complexos com lógica e tecnologia de ponta.</p>
+            <span class="hero-tag" data-i18n="hero-tag">Desenvolvedor de Software & Sistemas Embarcados</span>
+            <h1 data-i18n="hero-title">Daniel Germano</h1>
+            <p data-i18n="hero-desc">Especialista em engenharia de software, automação de hardware e firmware embarcado, unindo rigor analítico, pesquisa científica, ensaios reflexivos e literatura autoral.</p>
             <div class="hero-actions">
                 <a href="#projetos" class="btn btn-primary" data-i18n="hero-btn-projects">Ver Projetos</a>
-                <a href="mailto:daniel.germano15092007@gmail.com" class="btn btn-secondary" data-i18n="hero-btn-contact">Contato</a>
+                <a href="#editorial" class="btn btn-secondary" data-i18n="hero-btn-editorial">Ler Editorial</a>
+                <a href="#afiliados" class="btn btn-outline-red" data-i18n="nav-affiliates">Loja & Afiliados</a>
             </div>
         </div>
     </section>
@@ -46,19 +57,19 @@
             <h2 class="section-title" data-i18n="about-title">Sobre Mim</h2>
             <div class="about-grid">
                 <div class="about-photo-container">
-                    <img src="medias/images/foto_perfil.jpg" alt="Daniel Germano" class="about-photo">
+                    <img src="medias/images/ImagemProfissional.png" alt="Daniel Germano Lima dos Santos" class="about-photo">
                 </div>
                 <div class="about-text">
-                    <p data-i18n="about-p1">Moro em Santo André, SP. Sou um desenvolvedor apaixonado por desvendar o funcionamento íntimo das tecnologias — desde o silício dos microcontroladores na eletrônica até as camadas lógicas de alto nível em arquiteturas Web e Mobile.</p>
-                    <p data-i18n="about-p2">Meu perfil cognitivo de Altas Habilidades em lógica e comunicação me impulsiona a buscar desafios constantes, solucionando dores reais de forma eficiente e estruturada. Sou fundador da <strong>D-Oryzon</strong>, marca independente que idealizei para construir soluções digitais de alto impacto.</p>
+                    <p data-i18n="about-p1">Moro em Santo André, SP. Meu nome é <strong>Daniel Germano Lima dos Santos</strong>, sou um desenvolvedor e pesquisador apaixonado por desvendar o funcionamento íntimo dos sistemas — desde o silício dos microcontroladores na eletrônica até as camadas lógicas de alto nível em arquiteturas Web, Mobile e Inteligência Artificial na borda. Paralelamente, dedico-me à escrita multidisciplinar: reflexões filosóficas, explicações históricas, políticas e sociais, crônicas esportivas e produção literária de contos e poemas.</p>
+                    <p data-i18n="about-p2">Meu perfil cognitivo de Altas Habilidades em lógica e comunicação me impulsiona a buscar desafios constantes, solucionando dores reais de forma eficiente e estruturada. Sou fundador da <strong>D-Oryzon</strong>, iniciativa voltada a soluções digitais de alto impacto e inovação acessível.</p>
                 </div>
                 <div class="about-contacts">
                     <div class="contact-info-card">
-                        <h3 data-i18n="about-contact-title">Contato</h3>
+                        <h3 data-i18n="about-contact-title">Contato & Redes</h3>
                         <p><strong>WhatsApp:</strong><br><a href="https://wa.me/5511966302273" target="_blank" style="color: var(--accent-red);">+55 11 96630-2273</a></p>
-                        <p><strong>E-mail:</strong><br><a href="mailto:daniel.germano15092007@gmail.com" style="color: var(--accent-red);">daniel.germano15092007@gmail.com</a></p>
+                        <p><strong>E-mail:</strong><br><a href="mailto:danielgermano.dev@gmail.com" style="color: var(--accent-red);">danielgermano.dev@gmail.com</a></p>
                         <p><strong>LinkedIn:</strong><br><a href="https://linkedin.com/in/daniel-germano-lima-dos-santos" target="_blank" style="color: var(--accent-red);">in/daniel-germano-lima-dos-santos</a></p>
-                        <p><strong>D-Oryzon:</strong><br><a href="https://ydanielgermano.github.io/d-oryzon/" target="_blank" style="color: var(--accent-red);">Visitar Site Oficial</a></p>
+                        <p><strong>GitHub:</strong><br><a href="https://github.com/DanielGermano-Dev" target="_blank" style="color: var(--accent-red);">github.com/DanielGermano-Dev</a></p>
                     </div>
                 </div>
             </div>
@@ -66,137 +77,903 @@
 
         <!-- Habilidades Section -->
         <section id="habilidades" class="section">
-            <h2 class="section-title" data-i18n="skills-title">Habilidades</h2>
+            <h2 class="section-title" data-i18n="skills-title">Habilidades & Stacks</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3 data-i18n="skills-cat1">Linguagens</h3>
+                    <h3 data-i18n="skills-cat1">Linguagens & Backend</h3>
                     <div class="skill-tags">
                         <span>C / C++</span>
                         <span>C# (.NET)</span>
-                        <span>Python</span>
-                        <span>JavaScript</span>
+                        <span>Python 3</span>
+                        <span>JavaScript (ES6+)</span>
                         <span>Java (Spring Boot)</span>
-                        <span>HTML5 / CSS3</span>
-                        <span>Bootstrap</span>
+                        <span>SQL / Estruturas de Dados</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3 data-i18n="skills-cat2">Hardware & IoT</h3>
+                    <h3 data-i18n="skills-cat2">Hardware, Embarcados & IoT</h3>
                     <div class="skill-tags">
+                        <span>ESP32</span>
                         <span>Arduino</span>
-                        <span>ESP32 / ESP8266</span>
                         <span>Raspberry Pi</span>
                         <span>Firmware Nativo</span>
-                        <span>Tinkercad / Protheus</span>
+                        <span>Sensores Industriais / Térmicos</span>
+                        <span>Displays LCD / I2C / SPI</span>
+                        <span>Tinkercad / Proteus</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3 data-i18n="skills-cat3">Design & Outros</h3>
+                    <h3 data-i18n="skills-cat3">IA Local & Infraestrutura</h3>
                     <div class="skill-tags">
-                        <span>AutoCAD (Desenho Técnico)</span>
+                        <span>Ollama (Modelos Locais)</span>
+                        <span>Qwen 2.5-Coder</span>
+                        <span>Matrix Protocol</span>
+                        <span>Google Gemini API</span>
+                        <span>Docker</span>
+                        <span>Nextcloud OCC</span>
+                        <span>Linux / Bash Shell</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 data-i18n="skills-cat4">Design & Ferramentas</h3>
+                    <div class="skill-tags">
+                        <span>HTML5 / CSS3 Avançado</span>
+                        <span>AutoCAD (Desenho Técnico e Croquis)</span>
                         <span>Inkscape</span>
                         <span>GIMP / Canva</span>
-                        <span>Linux / Bash Shell</span>
-                        <span>Nextcloud (Soberania Digital)</span>
+                        <span>Git / GitHub</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projetos Section -->
+        <!-- Projetos Section (Expandida e com Filtro) -->
         <section id="projetos" class="section">
-            <h2 class="section-title" data-i18n="projects-title">Projetos & Portfólio</h2>
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title" data-i18n="projects-title">Projetos & Portfólio</h2>
+                    <p class="section-desc" data-i18n="projects-desc">Projetos autorais e soluções reais desenvolvidas com foco em eficiência, estabilidade e código limpo.</p>
+                </div>
+            </div>
+
+            <!-- Filtros de Categoria de Projetos -->
+            <div class="filter-bar">
+                <button class="filter-btn active proj-filter-btn" data-filter="all" data-i18n="proj-filter-all">Todos os Projetos</button>
+                <button class="filter-btn proj-filter-btn" data-filter="embedded" data-i18n="proj-filter-embedded">Embarcados & IoT</button>
+                <button class="filter-btn proj-filter-btn" data-filter="cli" data-i18n="proj-filter-cli">Automação & CLI</button>
+                <button class="filter-btn proj-filter-btn" data-filter="ai" data-i18n="proj-filter-ai">IA Local & Software</button>
+                <button class="filter-btn proj-filter-btn" data-filter="games" data-i18n="proj-filter-games">Jogos & Web</button>
+            </div>
+
             <div class="projects-grid">
                 
-                <div class="project-card">
-                    <div class="project-info">
-                        <span class="project-tag" data-i18n="proj-card1-tag">Empresarial</span>
-                        <h3>D-Oryzon</h3>
-                        <p data-i18n="proj-card1-desc">Marca independente de soluções digitais voltada a Sistemas Embarcados, Automação CLI, Web & Mobile, focando em otimizar pequenos negócios regionais.</p>
-                        <a href="https://github.com/yDanielGermano" target="_blank" class="project-link" data-i18n="proj-card1-link">Ver Código &rarr;</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-info">
-                        <span class="project-tag" data-i18n="proj-card2-tag">GameDev</span>
-                        <h3>PlayTypus</h3>
-                        <p data-i18n="proj-card2-desc">Jogo 2D autoral em equipe desenvolvido para a Latin American Game Showcase (LAGS), destacando-se na competição entre mais de 120 participantes.</p>
-                        <a href="https://dark-guard-lord.itch.io/playtipus" target="_blank" class="project-link" data-i18n="proj-card2-link">Jogar no Itch.io &rarr;</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-info">
-                        <span class="project-tag" data-i18n="proj-card3-tag">Automação / Python</span>
+                <!-- 1. Oryzon Companion -->
+                <div class="project-card" data-category="ai">
+                    <div>
+                        <div class="project-header-top">
+                            <span class="project-tag">IA & Automação</span>
+                            <span class="project-status">Ativo / Produção</span>
+                        </div>
                         <h3>Oryzon Companion</h3>
-                        <p data-i18n="proj-card3-desc">Ferramenta CLI estruturada em Python para monitorar e buscar vagas de tecnologia em tempo real diretamente de APIs de emprego.</p>
-                        <a href="https://github.com/yDanielGermano" target="_blank" class="project-link" data-i18n="proj-card1-link">Ver Código &rarr;</a>
+                        <p>Assistente autônomo e hub pessoal conectado via protocolo seguro <strong>Matrix</strong>. Integra inferência local via <strong>Ollama (Qwen 2.5-Coder)</strong> para tarefas offline e <strong>Gemini API</strong> para triagem inteligente de vagas e comandos.</p>
+                        <div class="project-techs">
+                            <span>Python</span>
+                            <span>Matrix SDK</span>
+                            <span>Ollama</span>
+                            <span>Gemini</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/DanielGermano-Dev" target="_blank" class="project-link">Ver Código &rarr;</a>
+                        <a href="artigo-pesquisa.html" class="project-link" style="color:var(--accent-red);">Ler Ensaio &rarr;</a>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-info">
-                        <span class="project-tag" data-i18n="proj-card4-tag">Soberania Digital</span>
-                        <h3>Local AI & Server Setup</h3>
-                        <p data-i18n="proj-card4-desc">Infraestrutura pessoal de containerização com Docker, orquestrando modelos de IA locais (Ollama) e Nextcloud no meu servidor pessoal.</p>
-                        <a href="https://github.com/yDanielGermano" target="_blank" class="project-link" data-i18n="proj-card1-link">Ver Código &rarr;</a>
+                <!-- 2. PlayTypus -->
+                <div class="project-card" data-category="games">
+                    <div>
+                        <div class="project-header-top">
+                            <span class="project-tag">GameDev</span>
+                            <span class="project-status">Top 71 LAGS</span>
+                        </div>
+                        <h3>PlayTypus</h3>
+                        <p>Jogo 2D autoral em equipe desenvolvido para a <strong>Latin American Game Showcase (LAGS)</strong>, destacando-se entre mais de 120 participantes de toda a América Latina.</p>
+                        <div class="project-techs">
+                            <span>Unity / GameMaker</span>
+                            <span>C# / GML</span>
+                            <span>Física 2D</span>
+                            <span>itch.io</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://dark-guard-lord.itch.io/playtipus" target="_blank" class="project-link">Jogar no Itch.io &rarr;</a>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-info">
-                        <span class="project-tag" data-i18n="proj-card5-tag">Web ARG</span>
-                        <h3>Projeto para amiga</h3>
-                        <p data-i18n="proj-card5-desc">Website imersivo inspirado em experiências de ARG (Alternate Reality Game) baseados no universo do Poppy Playtime.</p>
-                        <span class="project-status" data-i18n="proj-status-dev">Em Desenvolvimento</span>
+                <!-- 3. Painel do Kart Elétrico (TCC) -->
+                <div class="project-card" data-category="embedded">
+                    <div>
+                        <div class="project-header-top">
+                            <span class="project-tag">Eletrônica & IoT</span>
+                            <span class="project-status">Hardware Real</span>
+                        </div>
+                        <h3>Painel do Kart Elétrico (TCC)</h3>
+                        <p>Desenvolvimento de hardware embarcado e circuito impresso para monitoramento térmico contínuo, telemetria em tempo real e controle de tração no TCC de Eletrônica.</p>
+                        <div class="project-techs">
+                            <span>C / C++</span>
+                            <span>ESP32 / Arduino</span>
+                            <span>Sensores Térmicos</span>
+                            <span>Telemetria</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="medias/projects/SimulacaoPainelCarro.mp4" target="_blank" class="project-link">Ver Simulação &rarr;</a>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-info">
-                        <span class="project-tag" data-i18n="proj-card6-tag">Eletrônica & IoT</span>
-                        <h3 data-i18n="proj-card6-title">Painel do Kart Elétrico (TCC)</h3>
-                        <p data-i18n="proj-card6-desc">Desenvolvimento de hardware embarcado e circuito impresso para monitoramento térmico, controle de tração e exibição em tempo real de telemetria no TCC de Eletrônica.</p>
-                        <a href="medias/projects/SimulacaoPainelCarro.mp4" target="_blank" class="project-link" data-i18n="proj-card6-link">Ver Simulação &rarr;</a>
+                <!-- 4. Disk Cleaner CLI & Nextcloud Maintenance -->
+                <div class="project-card" data-category="cli">
+                    <div>
+                        <div class="project-header-top">
+                            <span class="project-tag">Automação CLI</span>
+                            <span class="project-status">SysAdmin</span>
+                        </div>
+                        <h3>Disk Cleaner & Server Maintenance</h3>
+                        <p>Ferramenta executável de alta velocidade para manutenção de discos locais e servidores Nextcloud Dockerizados, executando expurgo de lixeiras e histórico de versões via OCC.</p>
+                        <div class="project-techs">
+                            <span>Python</span>
+                            <span>Docker CLI</span>
+                            <span>Nextcloud OCC</span>
+                            <span>SysAdmin</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/DanielGermano-Dev" target="_blank" class="project-link">Ver Código &rarr;</a>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-info">
-                        <span class="project-tag" data-i18n="proj-card7-tag">Backend / C#</span>
+                <!-- 5. Duplicate File Hash Scanner -->
+                <div class="project-card" data-category="cli">
+                    <div>
+                        <div class="project-header-top">
+                            <span class="project-tag">Performance CLI</span>
+                            <span class="project-status">Algoritmo</span>
+                        </div>
+                        <h3>Duplicate File Hash Scanner</h3>
+                        <p>Motor de análise e desduplicação de arquivos em múltiplos discos. Emprega estratégia em dois níveis: pré-filtragem por tamanho e conferência estrita de <strong>MD5 Hash</strong>.</p>
+                        <div class="project-techs">
+                            <span>Python</span>
+                            <span>Hash MD5</span>
+                            <span>I/O Otimizado</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/DanielGermano-Dev" target="_blank" class="project-link">Ver Código &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- 6. Local AI & Server Setup -->
+                <div class="project-card" data-category="ai">
+                    <div>
+                        <div class="project-header-top">
+                            <span class="project-tag">Soberania Digital</span>
+                            <span class="project-status">Infraestrutura</span>
+                        </div>
+                        <h3>Local AI & Server Infrastructure</h3>
+                        <p>Infraestrutura pessoal de containerização com Docker, orquestrando modelos de IA locais (Ollama / Qwen 2.5) e armazenamento privado Nextcloud com foco em privacidade total.</p>
+                        <div class="project-techs">
+                            <span>Docker</span>
+                            <span>Ollama</span>
+                            <span>Nextcloud</span>
+                            <span>Linux</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/DanielGermano-Dev" target="_blank" class="project-link">Ver Código &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- 7. InfinityCalc -->
+                <div class="project-card" data-category="cli">
+                    <div>
+                        <div class="project-header-top">
+                            <span class="project-tag">Backend / C#</span>
+                            <span class="project-status">Concluído</span>
+                        </div>
                         <h3>InfinityCalc</h3>
-                        <p data-i18n="proj-card7-desc">Aplicação CLI matemática robusta em C# com operações complexas, teoremas matemáticos (triângulo retângulo) e um sistema de tabuada interativo infinito.</p>
-                        <a href="https://github.com/yDanielGermano/infinitty-loop-calc" target="_blank" class="project-link" data-i18n="proj-card1-link">Ver Código &rarr;</a>
+                        <p>Aplicação CLI matemática robusta em C# com operações complexas, teoremas matemáticos (triângulo retângulo) e um sistema de tabuada interativo infinito.</p>
+                        <div class="project-techs">
+                            <span>C# (.NET)</span>
+                            <span>CLI</span>
+                            <span>Matemática Pura</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/DanielGermano-Dev/infinitty-loop-calc" target="_blank" class="project-link">Ver Código &rarr;</a>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-info">
-                        <span class="project-tag" data-i18n="proj-card8-tag">Finanças / Python</span>
+                <!-- 8. Predict Price -->
+                <div class="project-card" data-category="cli">
+                    <div>
+                        <div class="project-header-top">
+                            <span class="project-tag">Finanças / Python</span>
+                            <span class="project-status">Concluído</span>
+                        </div>
                         <h3>Predict Price</h3>
-                        <p data-i18n="proj-card8-desc">Calculadora de taxas de importação baseada em legislação nacional e estadual (IOF/ICMS) com integração em tempo real a APIs de câmbio de moedas.</p>
-                        <a href="https://github.com/yDanielGermano/predict-price" target="_blank" class="project-link" data-i18n="proj-card1-link">Ver Código &rarr;</a>
+                        <p>Calculadora de tributos de importação com base em alíquotas nacionais e estaduais (IOF/ICMS), consumindo APIs de câmbio de moedas em tempo real.</p>
+                        <div class="project-techs">
+                            <span>Python</span>
+                            <span>REST APIs</span>
+                            <span>Cálculos Fiscais</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/DanielGermano-Dev/predict-price" target="_blank" class="project-link">Ver Código &rarr;</a>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-info">
-                        <span class="project-tag" data-i18n="proj-card9-tag">Produtividade / Python</span>
+                <!-- 9. FreeSecretary -->
+                <div class="project-card" data-category="cli">
+                    <div>
+                        <div class="project-header-top">
+                            <span class="project-tag">Produtividade</span>
+                            <span class="project-status">Concluído</span>
+                        </div>
                         <h3>FreeSecretary</h3>
-                        <p data-i18n="proj-card9-desc">Assistente pessoal automatizado em Python que gera agendas e rotinas diárias personalizadas em Markdown a partir de especificações estruturadas em JSON.</p>
-                        <a href="https://github.com/yDanielGermano/free-secretary" target="_blank" class="project-link" data-i18n="proj-card1-link">Ver Código &rarr;</a>
+                        <p>Assistente de terminal em Python que sintetiza e formata rotinas diárias e agendas estruturadas em Markdown a partir de regras JSON customizadas.</p>
+                        <div class="project-techs">
+                            <span>Python</span>
+                            <span>JSON Parser</span>
+                            <span>Markdown Gen</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/DanielGermano-Dev/free-secretary" target="_blank" class="project-link">Ver Código &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- 10. Web ARG Project (Projeto Lana) -->
+                <div class="project-card" data-category="games">
+                    <div>
+                        <div class="project-header-top">
+                            <span class="project-tag">Web ARG</span>
+                            <span class="project-status">Em Desenvolvimento</span>
+                        </div>
+                        <h3>Web ARG Imersivo (Projeto Lana)</h3>
+                        <p>Website interativo e narrativo inspirado em experiências de ARG (Alternate Reality Game), com puzzles lógicos, ambientação imersiva e mecânicas de decodificação.</p>
+                        <div class="project-techs">
+                            <span>HTML5 / CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Narrative Design</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <span class="project-status">Em Desenvolvimento</span>
+                    </div>
+                </div>
+
+                <!-- 11. D-Oryzon Ecosystem & Portal -->
+                <div class="project-card" data-category="games">
+                    <div>
+                        <div class="project-header-top">
+                            <span class="project-tag">Plataforma Web</span>
+                            <span class="project-status">Em Produção</span>
+                        </div>
+                        <h3>D-Oryzon Ecosystem & Portal</h3>
+                        <p>Portal institucional e ecossistema de soluções digitais sob medida, integrando módulos de software, serviços de tecnologia e identidade visual exclusiva.</p>
+                        <div class="project-techs">
+                            <span>HTML5 / CSS3</span>
+                            <span>JavaScript ES6</span>
+                            <span>UI/UX Modular</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/DanielGermano-Dev" target="_blank" class="project-link">Ver Ecossistema &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- 12. DevOps & Linux Automation Suite -->
+                <div class="project-card" data-category="cli">
+                    <div>
+                        <div class="project-header-top">
+                            <span class="project-tag">DevOps & Linux</span>
+                            <span class="project-status">Concluído</span>
+                        </div>
+                        <h3>DevOps & Linux Automation Suite</h3>
+                        <p>Pipeline de scripts em Bash e Python para rotinas do Linux: backup automatizado na nuvem via Google Drive API, profiling e economia de bateria, e otimização de rede para streaming local (Moonlight/Sunshine).</p>
+                        <div class="project-techs">
+                            <span>Bash Shell</span>
+                            <span>Python</span>
+                            <span>Google Drive API</span>
+                            <span>SysAdmin</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/DanielGermano-Dev" target="_blank" class="project-link">Ver Código &rarr;</a>
                     </div>
                 </div>
 
             </div>
+        </section>
+
+        <!-- Editorial, Ensaios & Literatura Multidisciplinar Section -->
+        <section id="editorial" class="section">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title" data-i18n="editorial-title">Editorial, Ensaios & Literatura</h2>
+                    <p class="section-desc" data-i18n="editorial-intro-p">Espaço aberto para dissecar hipóteses técnicas, compartilhar entendimentos filosóficos, análises históricas, políticas e sociais, crônicas de jornalismo esportivo e criações literárias autorais (contos e poemas).</p>
+                </div>
+            </div>
+
+            <!-- Filtros Multidisciplinares do Editorial -->
+            <div class="filter-bar">
+                <button class="filter-btn active edit-filter-btn" data-editorial-filter="all" data-i18n="edit-filter-all">Todos os Textos</button>
+                <button class="filter-btn edit-filter-btn" data-editorial-filter="opiniao" data-i18n="edit-filter-opiniao">Opinião Pessoal</button>
+                <button class="filter-btn edit-filter-btn" data-editorial-filter="esportes" data-i18n="edit-filter-esportes">Jornalismo Esportivo</button>
+                <button class="filter-btn edit-filter-btn" data-editorial-filter="ciencia" data-i18n="edit-filter-ciencia">Pesquisa Científica</button>
+                <button class="filter-btn edit-filter-btn" data-editorial-filter="historia" data-i18n="edit-filter-historia">Fatos Históricos</button>
+                <button class="filter-btn edit-filter-btn" data-editorial-filter="literatura" data-i18n="edit-filter-literatura">Poemas e Contos</button>
+            </div>
+
+            <div class="editorial-grid">
+                
+                <!-- 1. Pesquisa Científica -->
+                <article class="article-card" data-editorial-category="ciencia">
+                    <div>
+                        <div class="article-meta">
+                            <span>📅 28 de Agosto, 2026</span>
+                            <span>⏱️ 8 min de leitura</span>
+                            <span class="project-tag tag-ciencia">Pesquisa Científica</span>
+                        </div>
+                        <h3>Aplicações de LLMs Locais na Borda: Eficiência Energética e Redução de Custos com Qwen 2.5 e Matrix</h3>
+                        
+                        <div class="article-thesis-box">
+                            <strong>Pergunta / Hipótese Investigada:</strong>
+                            <p>“É tecnicamente viável substituir APIs pagas de nuvem por modelos locais quantizados de 3B parâmetros em tarefas diárias de triagem de código sem perda de precisão?”</p>
+                        </div>
+                        <p>Dissecamos o caso de uso real do <em>Oryzon Companion</em>, medindo latência, 4.2GB de RAM e 98,5% de economia mensal frente a chamadas remotas de nuvem.</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <a href="artigo-pesquisa.html" class="btn btn-primary" data-i18n="editorial-read-btn">Ler Texto Completo &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- 2. Opinião Pessoal / Filosofia -->
+                <article class="article-card" data-editorial-category="opiniao">
+                    <div>
+                        <div class="article-meta">
+                            <span>📅 04 de Setembro, 2026</span>
+                            <span>⏱️ 6 min de leitura</span>
+                            <span class="project-tag tag-opiniao">Opinião Pessoal</span>
+                        </div>
+                        <h3>A Ilusão da Hiperconectividade e a Fragmentação do Pensamento Crítico</h3>
+                        
+                        <div class="article-thesis-box" style="border-left-color: #f59e0b;">
+                            <strong style="color: #f59e0b;">Premissa & Reflexão:</strong>
+                            <p>“A aceleração do consumo de microconteúdos digitais está atrofiando a capacidade humana de contemplação e reflexão profunda sobre dilemas existenciais?”</p>
+                        </div>
+                        <p>Uma reflexão filosófica sobre a economia da atenção, a solidão digital, o valor do silêncio cognitivo e a reconstrução de espaços de foco autêntico em um mundo hiperestimulado.</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <a href="artigo-pesquisa.html" class="btn btn-secondary" data-i18n="editorial-read-btn">Ler Texto Completo &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- 3. Fatos Históricos & Análise Social -->
+                <article class="article-card" data-editorial-category="historia">
+                    <div>
+                        <div class="article-meta">
+                            <span>📅 22 de Agosto, 2026</span>
+                            <span>⏱️ 7 min de leitura</span>
+                            <span class="project-tag tag-historia">Fatos Históricos</span>
+                        </div>
+                        <h3>A Descentralização da Informação e a Queda de Paradigmas: Lições da História Moderna</h3>
+                        
+                        <div class="article-thesis-box" style="border-left-color: #a855f7;">
+                            <strong style="color: #a855f7;">Análise Histórico-Social:</strong>
+                            <p>“Como a democratização dos meios de registro e transmissão de dados historicamente antecedeu grandes transformações sociais e políticas?”</p>
+                        </div>
+                        <p>Uma análise comparativa entre a revolução da imprensa de tipos móveis no século XV e a ascensão da soberania de dados e redes peer-to-peer no século XXI.</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <a href="artigo-pesquisa.html" class="btn btn-secondary" data-i18n="editorial-read-btn">Ler Texto Completo &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- 4. Jornalismo Esportivo -->
+                <article class="article-card" data-editorial-category="esportes">
+                    <div>
+                        <div class="article-meta">
+                            <span>📅 18 de Agosto, 2026</span>
+                            <span>⏱️ 5 min de leitura</span>
+                            <span class="project-tag tag-esportes">Jornalismo Esportivo</span>
+                        </div>
+                        <h3>A Geometria dos Espaços: Como a Análise Quantitativa e a Tática Redefiniram o Futebol Moderno</h3>
+                        
+                        <div class="article-thesis-box" style="border-left-color: #10b981;">
+                            <strong style="color: #10b981;">Tese Esportiva:</strong>
+                            <p>“A predominância de modelos estatísticos de ocupação territorial e 'Expected Goals' (xG) eliminou o improviso e a poesia do drible intuitivo?”</p>
+                        </div>
+                        <p>Uma dissecação tática sobre transições em bloco, ocupação de meio-espaços e o equilíbrio fascinante entre métricas de dados e a genialidade espontânea dentro de campo.</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <a href="artigo-pesquisa.html" class="btn btn-secondary" data-i18n="editorial-read-btn">Ler Texto Completo &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- 5. Poemas e Contos -->
+                <article class="article-card" data-editorial-category="literatura">
+                    <div>
+                        <div class="article-meta">
+                            <span>📅 10 de Agosto, 2026</span>
+                            <span>⏱️ 3 min de leitura</span>
+                            <span class="project-tag tag-literatura">Poemas e Contos</span>
+                        </div>
+                        <h3>O Silêncio dos Transistores & O Eco da Madrugada</h3>
+                        
+                        <div class="poem-container">
+                            <div class="poem-stanza">
+                                <span class="poem-verse">Na quietude da bancada fria,</span>
+                                <span class="poem-verse">Onde a lógica não cansa,</span>
+                                <span class="poem-verse">Entre o pulso que alumia</span>
+                                <span class="poem-verse">E a faísca da lembrança...</span>
+                            </div>
+                            <div class="poem-stanza">
+                                <span class="poem-verse">Cálculo e verso se entrelaçam no ar,</span>
+                                <span class="poem-verse">Pois até o silício sabe sonhar.</span>
+                            </div>
+                        </div>
+                        <p>Uma coletânea de versos e uma narrativa curta sobre a busca de sentido, o silêncio da criação solitária e a poesia oculta nas ciências exatas.</p>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <a href="artigo-pesquisa.html" class="btn btn-secondary" data-i18n="editorial-read-btn">Ler Texto Completo &rarr;</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Seção de Recomendações Geek & Afiliados (Shopee, Amazon, Hardware & Games) -->
+        <section id="afiliados" class="section affiliate-section">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title" data-i18n="affiliates-title">Geek & Tech Hub | Recomendações & Afiliados</h2>
+                    <p class="section-desc" data-i18n="affiliates-desc">Produtos testados e selecionados a dedo para desenvolvedores, makers, gamers e entusiastas de tecnologia. Comprando pelos links abaixo, você apoia diretamente a manutenção dos meus projetos e pesquisas sem pagar nada a mais por isso.</p>
+                </div>
+            </div>
+
+            <!-- Filtros de Categorias de Afiliados -->
+            <div class="filter-bar">
+                <button class="filter-btn active aff-filter-btn" data-affiliate-filter="all" data-i18n="aff-filter-all">Todos os Itens</button>
+                <button class="filter-btn aff-filter-btn" data-affiliate-filter="electronics" data-i18n="aff-filter-electronics">Eletrônicos & IoT</button>
+                <button class="filter-btn aff-filter-btn" data-affiliate-filter="setup" data-i18n="aff-filter-setup">Setup & Periféricos</button>
+                <button class="filter-btn aff-filter-btn" data-affiliate-filter="games" data-i18n="aff-filter-games">Games & Geek</button>
+                <button class="filter-btn aff-filter-btn" data-affiliate-filter="books" data-i18n="aff-filter-books">Livros & Leituras</button>
+            </div>
+
+            <div class="affiliate-grid">
+                
+                <!-- 1. ESP32 DevKit -->
+                <div class="affiliate-card" data-affiliate-category="electronics">
+                    <div class="affiliate-card-top">
+                        <span class="store-badge store-shopee">🟠 Shopee Oficial</span>
+                        <span class="highlight-badge">🛠️ Escolha Maker</span>
+                    </div>
+                    <div class="affiliate-icon-box">
+                        <span class="aff-icon">⚡</span>
+                    </div>
+                    <div class="affiliate-body">
+                        <h3>ESP32 NodeMCU DevKit V1 Wi-Fi + BLE</h3>
+                        <p class="affiliate-tagline">Microcontrolador Dual Core 240MHz, Wi-Fi 802.11 b/g/n e Bluetooth BLE integrados.</p>
+                        <div class="affiliate-tip">
+                            <strong>💡 Dica do Daniel:</strong>
+                            <p>O melhor microcontrolador para prototipar automação residencial, telemetria e microsserviços embarcados na borda com baixo consumo.</p>
+                        </div>
+                        <div class="affiliate-price-row">
+                            <span class="aff-price">A partir de R$ 24,90</span>
+                            <span class="aff-status">Em Estoque</span>
+                        </div>
+                    </div>
+                    <div class="affiliate-footer">
+                        <a href="https://shopee.com.br/search?keyword=esp32%20nodemcu%20devkit%20v1" target="_blank" rel="noopener noreferrer" class="btn btn-shopee" data-i18n="aff-btn-buy">Comprar na Shopee 🛍️</a>
+                    </div>
+                </div>
+
+                <!-- 2. Kit Arduino Avançado -->
+                <div class="affiliate-card" data-affiliate-category="electronics">
+                    <div class="affiliate-card-top">
+                        <span class="store-badge store-shopee">🟠 Shopee Oficial</span>
+                        <span class="highlight-badge">🔥 Mais Vendido</span>
+                    </div>
+                    <div class="affiliate-icon-box">
+                        <span class="aff-icon">🎛️</span>
+                    </div>
+                    <div class="affiliate-body">
+                        <h3>Kit Arduino Avançado com Módulos & Sensores</h3>
+                        <p class="affiliate-tagline">Kit completo com placa R3, jumpers, display LCD, sensores de temperatura, relés e motor de passo.</p>
+                        <div class="affiliate-tip">
+                            <strong>💡 Dica do Daniel:</strong>
+                            <p>Perfeito para quem está iniciando em eletrônica ou desenvolvendo projetos para faculdade/ETEC sem precisar comprar componentes separados.</p>
+                        </div>
+                        <div class="affiliate-price-row">
+                            <span class="aff-price">A partir de R$ 98,00</span>
+                            <span class="aff-status">Frete Grátis</span>
+                        </div>
+                    </div>
+                    <div class="affiliate-footer">
+                        <a href="https://shopee.com.br/search?keyword=kit%20arduino%20iniciante%20completo" target="_blank" rel="noopener noreferrer" class="btn btn-shopee" data-i18n="aff-btn-buy">Comprar na Shopee 🛍️</a>
+                    </div>
+                </div>
+
+                <!-- 3. Ferro de Solda TS101 -->
+                <div class="affiliate-card" data-affiliate-category="electronics">
+                    <div class="affiliate-card-top">
+                        <span class="store-badge store-shopee">🟠 Shopee Oficial</span>
+                        <span class="highlight-badge">⚡ Alta Precisão</span>
+                    </div>
+                    <div class="affiliate-icon-box">
+                        <span class="aff-icon">🔧</span>
+                    </div>
+                    <div class="affiliate-body">
+                        <h3>Mini Ferro de Solda Digital TS101 USB-C PD</h3>
+                        <p class="affiliate-tagline">Aquecimento ultra veloz em 6 segundos, display OLED, controle PID de temperatura até 400°C.</p>
+                        <div class="affiliate-tip">
+                            <strong>💡 Dica do Daniel:</strong>
+                            <p>Revolução para bancadas de eletrônica: portátil, opera com Power Bank USB-C PD e permite calibragem milimétrica de solda SMD.</p>
+                        </div>
+                        <div class="affiliate-price-row">
+                            <span class="aff-price">A partir de R$ 195,00</span>
+                            <span class="aff-status">Destaque Tech</span>
+                        </div>
+                    </div>
+                    <div class="affiliate-footer">
+                        <a href="https://shopee.com.br/search?keyword=ferro%20solda%20ts101%20usbc" target="_blank" rel="noopener noreferrer" class="btn btn-shopee" data-i18n="aff-btn-buy">Comprar na Shopee 🛍️</a>
+                    </div>
+                </div>
+
+                <!-- 4. Multímetro True-RMS -->
+                <div class="affiliate-card" data-affiliate-category="electronics">
+                    <div class="affiliate-card-top">
+                        <span class="store-badge store-shopee">🟠 Shopee Oficial</span>
+                        <span class="highlight-badge">🛡️ Bancada Essencial</span>
+                    </div>
+                    <div class="affiliate-icon-box">
+                        <span class="aff-icon">📟</span>
+                    </div>
+                    <div class="affiliate-body">
+                        <h3>Multímetro Digital Automático True-RMS com LCD</h3>
+                        <p class="affiliate-tagline">Auto-range com medição de tensão AC/DC, corrente, capacitância, frequência, NCV e teste de continuidade.</p>
+                        <div class="affiliate-tip">
+                            <strong>💡 Dica do Daniel:</strong>
+                            <p>Indispensável para diagnosticar fontes, placas de circuito e verificar linhas de 3.3V / 5V com total segurança.</p>
+                        </div>
+                        <div class="affiliate-price-row">
+                            <span class="aff-price">A partir de R$ 79,90</span>
+                            <span class="aff-status">Em Estoque</span>
+                        </div>
+                    </div>
+                    <div class="affiliate-footer">
+                        <a href="https://shopee.com.br/search?keyword=multimetro%20digital%20true%20rms%20automatico" target="_blank" rel="noopener noreferrer" class="btn btn-shopee" data-i18n="aff-btn-buy">Comprar na Shopee 🛍️</a>
+                    </div>
+                </div>
+
+                <!-- 5. Teclado Mecânico 75% -->
+                <div class="affiliate-card" data-affiliate-category="setup">
+                    <div class="affiliate-card-top">
+                        <span class="store-badge store-shopee">🟠 Shopee Oficial</span>
+                        <span class="highlight-badge">⭐ Favorito Dev</span>
+                    </div>
+                    <div class="affiliate-icon-box">
+                        <span class="aff-icon">⌨️</span>
+                    </div>
+                    <div class="affiliate-body">
+                        <h3>Teclado Mecânico Custom 75% Hot-Swappable</h3>
+                        <p class="affiliate-tagline">Layout compacto ergonômico, switches táteis pré-lubrificados, espuma anti-ruído e iluminação RGB.</p>
+                        <div class="affiliate-tip">
+                            <strong>💡 Dica do Daniel:</strong>
+                            <p>O formato 75% economiza espaço vital para o mousepad sem abrir mão das teclas de navegação essenciais na digitação de código.</p>
+                        </div>
+                        <div class="affiliate-price-row">
+                            <span class="aff-price">A partir de R$ 149,00</span>
+                            <span class="aff-status">Custo-Benefício</span>
+                        </div>
+                    </div>
+                    <div class="affiliate-footer">
+                        <a href="https://shopee.com.br/search?keyword=teclado%20mecanico%20custom%2075%20hotswap" target="_blank" rel="noopener noreferrer" class="btn btn-shopee" data-i18n="aff-btn-buy">Comprar na Shopee 🛍️</a>
+                    </div>
+                </div>
+
+                <!-- 6. Mouse Gamer Sem Fio -->
+                <div class="affiliate-card" data-affiliate-category="setup">
+                    <div class="affiliate-card-top">
+                        <span class="store-badge store-shopee">🟠 Shopee Oficial</span>
+                        <span class="highlight-badge">⚡ Baixa Latência</span>
+                    </div>
+                    <div class="affiliate-icon-box">
+                        <span class="aff-icon">🖱️</span>
+                    </div>
+                    <div class="affiliate-body">
+                        <h3>Mouse Gamer Wireless Ultra Leve com Sensor Óptico</h3>
+                        <p class="affiliate-tagline">Sensor óptico de alta resolução, peso inferior a 60g, conexão 2.4GHz sem delay e bateria recarregável.</p>
+                        <div class="affiliate-tip">
+                            <strong>💡 Dica do Daniel:</strong>
+                            <p>A leveza e a precisão do sensor previnem dores no punho em longas jornadas de trabalho e garantem resposta instantânea nos jogos.</p>
+                        </div>
+                        <div class="affiliate-price-row">
+                            <span class="aff-price">A partir de R$ 89,90</span>
+                            <span class="aff-status">Em Promoção</span>
+                        </div>
+                    </div>
+                    <div class="affiliate-footer">
+                        <a href="https://shopee.com.br/search?keyword=mouse%20gamer%20sem%20fio%20ultraleve" target="_blank" rel="noopener noreferrer" class="btn btn-shopee" data-i18n="aff-btn-buy">Comprar na Shopee 🛍️</a>
+                    </div>
+                </div>
+
+                <!-- 7. Screenbar LED -->
+                <div class="affiliate-card" data-affiliate-category="setup">
+                    <div class="affiliate-card-top">
+                        <span class="store-badge store-shopee">🟠 Shopee Oficial</span>
+                        <span class="highlight-badge">👁️ Conforto Ocular</span>
+                    </div>
+                    <div class="affiliate-icon-box">
+                        <span class="aff-icon">💡</span>
+                    </div>
+                    <div class="affiliate-body">
+                        <h3>Luminária Screenbar LED para Monitor Anti-Reflexo</h3>
+                        <p class="affiliate-tagline">Controle touch de temperatura de cor (quente/fria), dimmer contínuo e fixação magnética no topo da tela.</p>
+                        <div class="affiliate-tip">
+                            <strong>💡 Dica do Daniel:</strong>
+                            <p>A iluminação assimétrica clareia o teclado e os cadernos de anotação sem incidir luz direta no monitor, evitando vista cansada.</p>
+                        </div>
+                        <div class="affiliate-price-row">
+                            <span class="aff-price">A partir de R$ 69,90</span>
+                            <span class="aff-status">Recomendado</span>
+                        </div>
+                    </div>
+                    <div class="affiliate-footer">
+                        <a href="https://shopee.com.br/search?keyword=screenbar%20luminaria%20monitor%20led" target="_blank" rel="noopener noreferrer" class="btn btn-shopee" data-i18n="aff-btn-buy">Comprar na Shopee 🛍️</a>
+                    </div>
+                </div>
+
+                <!-- 8. Suporte Articulado a Gás -->
+                <div class="affiliate-card" data-affiliate-category="setup">
+                    <div class="affiliate-card-top">
+                        <span class="store-badge store-shopee">🟠 Shopee Oficial</span>
+                        <span class="highlight-badge">📐 Ergonomia Pro</span>
+                    </div>
+                    <div class="affiliate-icon-box">
+                        <span class="aff-icon">🖥️</span>
+                    </div>
+                    <div class="affiliate-body">
+                        <h3>Suporte Articulado a Gás para Monitor (Padrão VESA)</h3>
+                        <p class="affiliate-tagline">Pistão a gás suave para telas de 17" a 34", rotação 360° (retrato/paisagem) e organizador de cabos.</p>
+                        <div class="affiliate-tip">
+                            <strong>💡 Dica do Daniel:</strong>
+                            <p>Permite virar o monitor na vertical para leitura de código longo ou logs de terminal, liberando 100% do espaço da mesa.</p>
+                        </div>
+                        <div class="affiliate-price-row">
+                            <span class="aff-price">A partir de R$ 139,00</span>
+                            <span class="aff-status">Mais Vendido</span>
+                        </div>
+                    </div>
+                    <div class="affiliate-footer">
+                        <a href="https://shopee.com.br/search?keyword=suporte%20articulado%20pistao%20gas%20monitor%20vesa" target="_blank" rel="noopener noreferrer" class="btn btn-shopee" data-i18n="aff-btn-buy">Comprar na Shopee 🛍️</a>
+                    </div>
+                </div>
+
+                <!-- 9. Controle Gamer 8BitDo Hall Effect -->
+                <div class="affiliate-card" data-affiliate-category="games">
+                    <div class="affiliate-card-top">
+                        <span class="store-badge store-shopee">🟠 Shopee Oficial</span>
+                        <span class="highlight-badge">🎮 Zero Drift</span>
+                    </div>
+                    <div class="affiliate-icon-box">
+                        <span class="aff-icon">🎯</span>
+                    </div>
+                    <div class="affiliate-body">
+                        <h3>Controle Gamer Sem Fio Bluetooth Hall Effect</h3>
+                        <p class="affiliate-tagline">Sensores magnéticos anti-drift, botões traseiros mapeáveis e compatibilidade universal (PC, Switch, Android).</p>
+                        <div class="affiliate-tip">
+                            <strong>💡 Dica do Daniel:</strong>
+                            <p>A tecnologia magnética Hall Effect garante durabilidade infinita nos analógicos, essencial para testes em gamedev e jogatina competitiva.</p>
+                        </div>
+                        <div class="affiliate-price-row">
+                            <span class="aff-price">A partir de R$ 169,00</span>
+                            <span class="aff-status">Nota Máxima</span>
+                        </div>
+                    </div>
+                    <div class="affiliate-footer">
+                        <a href="https://shopee.com.br/search?keyword=controle%208bitdo%20ultimate%20hall%20effect" target="_blank" rel="noopener noreferrer" class="btn btn-shopee" data-i18n="aff-btn-buy">Comprar na Shopee 🛍️</a>
+                    </div>
+                </div>
+
+                <!-- 10. Console Retro Portátil R36S -->
+                <div class="affiliate-card" data-affiliate-category="games">
+                    <div class="affiliate-card-top">
+                        <span class="store-badge store-shopee">🟠 Shopee Oficial</span>
+                        <span class="highlight-badge">👾 Clássicos Portáteis</span>
+                    </div>
+                    <div class="affiliate-icon-box">
+                        <span class="aff-icon">🕹️</span>
+                    </div>
+                    <div class="affiliate-body">
+                        <h3>Console Retro Portátil R36S Tela IPS Linux</h3>
+                        <p class="affiliate-tagline">Tela IPS de 3.5 polegadas, sistema ArkOS Linux e suporte a mais de 20 consoles clássicos (PS1, GBA, Arcade, N64).</p>
+                        <div class="affiliate-tip">
+                            <strong>💡 Dica do Daniel:</strong>
+                            <p>O melhor portátil retrô custo-benefício do mercado: roda sistemas de código aberto e permite customizar temas e shaders nostálgicos.</p>
+                        </div>
+                        <div class="affiliate-price-row">
+                            <span class="aff-price">A partir de R$ 159,00</span>
+                            <span class="aff-status">Sensação Geek</span>
+                        </div>
+                    </div>
+                    <div class="affiliate-footer">
+                        <a href="https://shopee.com.br/search?keyword=console%20portatil%20r36s%20retro" target="_blank" rel="noopener noreferrer" class="btn btn-shopee" data-i18n="aff-btn-buy">Comprar na Shopee 🛍️</a>
+                    </div>
+                </div>
+
+                <!-- 11. Livro Código Limpo (Clean Code) -->
+                <div class="affiliate-card" data-affiliate-category="books">
+                    <div class="affiliate-card-top">
+                        <span class="store-badge store-amazon">🟡 Amazon / Shopee</span>
+                        <span class="highlight-badge">📚 Obra Fundamental</span>
+                    </div>
+                    <div class="affiliate-icon-box">
+                        <span class="aff-icon">📖</span>
+                    </div>
+                    <div class="affiliate-body">
+                        <h3>Código Limpo: Habilidades Práticas do Agile Software</h3>
+                        <p class="affiliate-tagline">Edição em Português de Robert C. Martin (Uncle Bob). Guia essencial de arquitetura e legibilidade.</p>
+                        <div class="affiliate-tip">
+                            <strong>💡 Dica do Daniel:</strong>
+                            <p>Leitura formativa essencial: ensina a diferença entre código funcional e código elegante, testável e manutenível a longo prazo.</p>
+                        </div>
+                        <div class="affiliate-price-row">
+                            <span class="aff-price">A partir de R$ 74,90</span>
+                            <span class="aff-status">Best-Seller</span>
+                        </div>
+                    </div>
+                    <div class="affiliate-footer">
+                        <a href="https://shopee.com.br/search?keyword=livro%20codigo%20limpo%20robert%20martin" target="_blank" rel="noopener noreferrer" class="btn btn-shopee" data-i18n="aff-btn-buy">Comprar na Loja 🛍️</a>
+                    </div>
+                </div>
+
+                <!-- 12. Livro Entendendo Algoritmos -->
+                <div class="affiliate-card" data-affiliate-category="books">
+                    <div class="affiliate-card-top">
+                        <span class="store-badge store-amazon">🟡 Amazon / Shopee</span>
+                        <span class="highlight-badge">💡 Didática Clara</span>
+                    </div>
+                    <div class="affiliate-icon-box">
+                        <span class="aff-icon">📊</span>
+                    </div>
+                    <div class="affiliate-body">
+                        <h3>Entendendo Algoritmos: Um Guia Ilustrado</h3>
+                        <p class="affiliate-tagline">Por Aditya Y. Bhargava. Estruturas de dados, ordenação, busca em grafos e algoritmos gulosos.</p>
+                        <div class="affiliate-tip">
+                            <strong>💡 Dica do Daniel:</strong>
+                            <p>Descomplica tópicos avançados da ciência da computação através de ilustrações intuitivas e exemplos práticos diretos.</p>
+                        </div>
+                        <div class="affiliate-price-row">
+                            <span class="aff-price">A partir de R$ 59,90</span>
+                            <span class="aff-status">Indispensável</span>
+                        </div>
+                    </div>
+                    <div class="affiliate-footer">
+                        <a href="https://shopee.com.br/search?keyword=livro%20entendendo%20algoritmos%20aditya%20bhargava" target="_blank" rel="noopener noreferrer" class="btn btn-shopee" data-i18n="aff-btn-buy">Comprar na Loja 🛍️</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Disclaimer de Afiliados Transparente -->
+            <div class="affiliate-disclaimer-card">
+                <div class="disclaimer-icon">ℹ️</div>
+                <div class="disclaimer-text">
+                    <h4 data-i18n="aff-disclaimer-title">Transparência e Política de Afiliação</h4>
+                    <p data-i18n="aff-disclaimer-p">Ao comprar através dos links recomendados nesta página, recebo uma pequena comissão das plataformas parceiras (como Shopee, Amazon e AliExpress). O valor do produto <strong>permanece exatamente o mesmo para você</strong>, com eventuais descontos e cupons ativos. Esse suporte me ajuda a continuar investindo em componentes para novos testes de hardware, servidores locais e publicações abertas de pesquisa.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Seção de Monetização, Comissões e Assinaturas -->
+        <section id="monetizacao" class="section monetization-section">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title" data-i18n="monetization-title">Comissões & Apoio Contínuo</h2>
+                    <p class="section-desc" data-i18n="monetization-desc">Monetizo meus conhecimentos através de serviços de desenvolvimento sob medida, consultorias técnicas e planos de apoio contínuo para manter minhas pesquisas e produções abertas à comunidade.</p>
+                </div>
+            </div>
+
+            <!-- Tiers de Assinatura e Encomenda -->
+            <div class="tiers-grid">
+                
+                <!-- Tier 1 -->
+                <div class="tier-card">
+                    <div>
+                        <h3 data-i18n="tier1-title">Leitor Apoiador</h3>
+                        <div class="tier-price" data-i18n="tier1-period">R$ 15 / mês</div>
+                        <div class="tier-period">Assinatura Mensal</div>
+                        <ul class="tier-features">
+                            <li>Acesso antecipado aos novos ensaios, pesquisas e contos</li>
+                            <li>Download dos códigos-fonte, análises e scripts</li>
+                            <li>Incentivo direto à produção autoral independente</li>
+                        </ul>
+                    </div>
+                    <a href="https://apoia.se/" target="_blank" class="btn btn-secondary" data-i18n="btn-support">Apoiar Projeto</a>
+                </div>
+
+                <!-- Tier 2 (Destaque) -->
+                <div class="tier-card featured">
+                    <span class="tier-badge">Mais Recomendado</span>
+                    <div>
+                        <h3 data-i18n="tier2-title">Patrono de Pesquisa</h3>
+                        <div class="tier-price" data-i18n="tier2-period">R$ 45 / mês</div>
+                        <div class="tier-period">Assinatura Mensal</div>
+                        <ul class="tier-features">
+                            <li>Todos os benefícios do Leitor Apoiador</li>
+                            <li>Sugestão e votação direta de novos temas de pesquisa e ensaios</li>
+                            <li>Nome destacado nos agradecimentos das publicações</li>
+                            <li>Canal direto de discussão técnica e reflexiva</li>
+                        </ul>
+                    </div>
+                    <a href="https://apoia.se/" target="_blank" class="btn btn-primary" data-i18n="btn-support">Tornar-se Patrono</a>
+                </div>
+
+                <!-- Tier 3 -->
+                <div class="tier-card">
+                    <div>
+                        <h3 data-i18n="tier3-title">Comissões & Consultoria</h3>
+                        <div class="tier-price" data-i18n="tier3-period">Sob Demanda</div>
+                        <div class="tier-period">Por Projeto / Escopo</div>
+                        <ul class="tier-features">
+                            <li>Desenvolvimento de scripts CLI customizados</li>
+                            <li>Prototipagem de firmware IoT (ESP32/Arduino)</li>
+                            <li>Estudos de viabilidade técnica e redação de ensaios sob medida</li>
+                            <li>Entrega de documentação completa e código limpo</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5511966302273?text=Olá+Daniel!+Gostaria+de+um+orçamento+para+uma+comissão+técnica" target="_blank" class="btn btn-primary" data-i18n="btn-commission">Solicitar Comissão</a>
+                </div>
+
+            </div>
+
+            <!-- Caixa de Apoio Pix Direto e Plataformas -->
+            <div class="pix-support-container">
+                <h3 style="color:#ffffff; margin-bottom: 8px;" data-i18n="pix-title">Apoio Instantâneo via Pix</h3>
+                <p style="font-size: 0.95rem; color: var(--text-muted);">Você também pode apoiar diretamente meus projetos, pesquisas e criações literárias com qualquer contribuição:</p>
+                
+                <div class="pix-copy-box">
+                    <span class="pix-key-text">danielgermano.dev@gmail.com</span>
+                    <button class="btn-copy-pix" data-i18n="btn-copy">Copiar Chave Pix</button>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <span style="font-size: 0.85rem; color: var(--text-dim); display: block; margin-bottom: 10px;">Plataformas de Financiamento & Patrocínio:</span>
+                    <div class="platforms-grid">
+                        <a href="https://github.com/DanielGermano-Dev" target="_blank" class="platform-card">
+                            <span>⭐ GitHub Sponsors</span>
+                        </a>
+                        <a href="https://apoia.se/" target="_blank" class="platform-card">
+                            <span>🌱 Apoia.se</span>
+                        </a>
+                        <a href="https://buymeacoffee.com/" target="_blank" class="platform-card">
+                            <span>☕ Buy Me a Coffee</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
         <!-- Certificações Section -->
         <section id="certificacoes" class="section">
-            <h2 class="section-title" data-i18n="certs-title">Certificados</h2>
+            <h2 class="section-title" data-i18n="certs-title">Certificados & Conquistas</h2>
             <div id="certificatesContainer" class="certificates-grid">
-                <!-- Injetado dinamicamente via JS -->
+                <!-- Injetado dinamicamente via JS a partir de data/certificates.json -->
                 <p class="loading" data-i18n="certs-loading">Carregando certificações...</p>
             </div>
         </section>
@@ -211,7 +988,7 @@
                         <h3 data-i18n="edu-card1-title">Ensino Médio & Técnico em Eletrônica</h3>
                         <span class="timeline-date" data-i18n="edu-card1-date">Concluído em 2024</span>
                         <p class="timeline-place" data-i18n="edu-card1-place">ETEC Júlio de Mesquita</p>
-                        <p data-i18n="edu-card1-desc">Aprovado em 23° lugar. Formação teórica e prática em circuitos digitais, microcontroladores, lógica de controle e bancada analógica.</p>
+                        <p data-i18n="edu-card1-desc">Aprovado em 23° lugar. Formação teórica e prática em circuitos digitais, microcontroladores, lógica de controle, instrumentação física e bancada analógica.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -220,7 +997,7 @@
                         <h3 data-i18n="edu-card2-title">Engenharia de Software (Bacharelado)</h3>
                         <span class="timeline-date" data-i18n="edu-card2-date">Início em Agosto/2026</span>
                         <p class="timeline-place" data-i18n="edu-card2-place">Faculdade Anhanguera (EAD)</p>
-                        <p data-i18n="edu-card2-desc">Graduação focada no ciclo de vida completo de desenvolvimento de software, arquitetura de sistemas, metodologias ágeis e gerenciamento de projetos. Flexibilidade total para projetos comerciais e gamedev.</p>
+                        <p data-i18n="edu-card2-desc">Graduação focada no ciclo de vida completo de desenvolvimento de software, arquitetura de sistemas de alta escala, estruturas de dados e metodologias ágeis. Flexibilidade total para projetos comerciais e gamedev.</p>
                     </div>
                 </div>
             </div>
@@ -231,18 +1008,19 @@
     <!-- Footer -->
     <footer>
         <div class="footer-container">
-            <p data-i18n="footer-text">&copy; 2026 Daniel Germano. Soberania Digital e Software de Alto Impacto.</p>
+            <p data-i18n="footer-text">&copy; 2026 Daniel Germano. Engenharia de Software, Pesquisa & Produção Autoral.</p>
             <div class="social-links">
-                <a href="https://github.com/yDanielGermano" target="_blank">GitHub</a>
+                <a href="https://github.com/DanielGermano-Dev" target="_blank">GitHub</a>
                 <a href="https://linkedin.com/in/daniel-germano-lima-dos-santos" target="_blank">LinkedIn</a>
-                <a href="mailto:daniel.germano15092007@gmail.com">E-mail</a>
+                <a href="mailto:danielgermano.dev@gmail.com">E-mail</a>
             </div>
         </div>
     </footer>
 
-    <!-- Script de Carregamento de Certificações -->
+    <!-- Scripts de Interatividade e Carregamento Dinâmico -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+            // 1. Carregamento de Certificados via JSON
             fetch("data/certificates.json")
                 .then(response => {
                     if (!response.ok) throw new Error("Erro ao carregar arquivo de certificados.");
@@ -253,13 +1031,101 @@
                 })
                 .catch(err => {
                     const container = document.getElementById("certificatesContainer");
-                    container.innerHTML = `<p class="error">Não foi possível carregar os certificados. ${err.message}</p>`;
+                    if (container) {
+                        container.innerHTML = `<p class="error">Não foi possível carregar os certificados. ${err.message}</p>`;
+                    }
                 });
+
+            // 2. Filtros de Projetos por Categoria
+            const projectFilterBtns = document.querySelectorAll(".proj-filter-btn");
+            const projectCards = document.querySelectorAll(".project-card");
+
+            projectFilterBtns.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    projectFilterBtns.forEach(b => b.classList.remove("active"));
+                    btn.classList.add("active");
+
+                    const filter = btn.getAttribute("data-filter");
+
+                    projectCards.forEach(card => {
+                        const cat = card.getAttribute("data-category");
+                        if (filter === "all" || cat === filter) {
+                            card.style.display = "flex";
+                        } else {
+                            card.style.display = "none";
+                        }
+                    });
+                });
+            });
+
+            // 3. Filtros do Editorial / Ensaios por Categoria
+            const editFilterBtns = document.querySelectorAll(".edit-filter-btn");
+            const articleCards = document.querySelectorAll(".article-card");
+
+            editFilterBtns.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    editFilterBtns.forEach(b => b.classList.remove("active"));
+                    btn.classList.add("active");
+
+                    const filter = btn.getAttribute("data-editorial-filter");
+
+                    articleCards.forEach(card => {
+                        const cat = card.getAttribute("data-editorial-category");
+                        if (filter === "all" || cat === filter) {
+                            card.style.display = "flex";
+                        } else {
+                            card.style.display = "none";
+                        }
+                    });
+                });
+            });
+
+            // 4. Filtros da Seção de Afiliados / Loja Geek
+            const affFilterBtns = document.querySelectorAll(".aff-filter-btn");
+            const affiliateCards = document.querySelectorAll(".affiliate-card");
+
+            affFilterBtns.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    affFilterBtns.forEach(b => b.classList.remove("active"));
+                    btn.classList.add("active");
+
+                    const filter = btn.getAttribute("data-affiliate-filter");
+
+                    affiliateCards.forEach(card => {
+                        const cat = card.getAttribute("data-affiliate-category");
+                        if (filter === "all" || cat === filter) {
+                            card.style.display = "flex";
+                        } else {
+                            card.style.display = "none";
+                        }
+                    });
+                });
+            });
+
+            // 5. Botão Copiar Chave Pix
+            const btnCopyPix = document.querySelector(".btn-copy-pix");
+            if (btnCopyPix) {
+                btnCopyPix.addEventListener("click", () => {
+                    const pixKey = "danielgermano.dev@gmail.com";
+                    navigator.clipboard.writeText(pixKey).then(() => {
+                        const origText = btnCopyPix.innerText;
+                        btnCopyPix.innerText = "Copiado! ✓";
+                        btnCopyPix.style.background = "#ffffff";
+                        btnCopyPix.style.color = "#000000";
+                        setTimeout(() => {
+                            btnCopyPix.innerText = origText;
+                            btnCopyPix.style.background = "var(--accent-red)";
+                            btnCopyPix.style.color = "#ffffff";
+                        }, 2000);
+                    });
+                });
+            }
         });
 
         function renderCertificates(list) {
             const container = document.getElementById("certificatesContainer");
-            container.innerHTML = ""; // Limpa carregando
+            if (!container) return;
+            container.innerHTML = "";
 
             if (list.length === 0) {
                 container.innerHTML = "<p>Nenhum certificado cadastrado.</p>";
@@ -270,7 +1136,7 @@
                 const card = document.createElement("div");
                 card.className = "certificate-card";
                 
-                const isPdf = item.image.toLowerCase().endsWith(".pdf");
+                const isPdf = item.image && item.image.toLowerCase().endsWith(".pdf");
                 const displayImage = isPdf ? "https://placehold.co/400x250/141418/ff1e27?text=Visualizar+PDF" : item.image;
                 const clickLink = item.link || item.image;
                 
@@ -294,3 +1160,4 @@
     <script src="lang.js" defer></script>
 </body>
 </html>
+

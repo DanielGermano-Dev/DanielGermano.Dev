@@ -24,8 +24,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Decrypt certificates JSON
-        run: gpg --quiet --batch --yes --decrypt --passphrase "${{ secrets.DECRYPT_PASSPHRASE }}" --output data/certificates.json data/certificates.json.gpg
+      - name: Decrypt certificates JSON if needed
+        run: |
+          if [ ! -f "data/certificates.json" ] && [ -f "data/certificates.json.gpg" ] && [ -n "${{ secrets.DECRYPT_PASSPHRASE }}" ]; then
+            gpg --quiet --batch --yes --decrypt --passphrase "${{ secrets.DECRYPT_PASSPHRASE }}" --output data/certificates.json data/certificates.json.gpg
+          fi
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact

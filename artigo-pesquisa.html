@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicações de LLMs Locais na Borda | Daniel Germano</title>
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('dg_portfolio_theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    <link rel="icon" type="image/png" href="medias/images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">DG<span>.</span></a>
+            <nav>
+                <a href="index.html#sobre" data-i18n="nav-about">Sobre</a>
+                <a href="index.html#habilidades" data-i18n="nav-skills">Habilidades</a>
+                <a href="index.html#projetos" data-i18n="nav-projects">Projetos</a>
+                <a href="index.html#editorial" data-i18n="nav-editorial" class="active">Editorial & Pesquisas</a>
+                <a href="index.html#monetizacao" data-i18n="nav-monetization">Comissões & Apoio</a>
+                <a href="index.html#certificacoes" data-i18n="nav-certs">Certificados</a>
+                <a href="index.html#formacao" data-i18n="nav-edu">Formação</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-container" style="padding-top: 130px; max-width: 900px;">
+        
+        <div style="margin-bottom: 25px;">
+            <a href="index.html#editorial" style="color: var(--accent-red); font-weight: 600;">&larr; Voltar para a lista de ensaios</a>
+        </div>
+
+        <article class="article-reader-container">
+            
+            <div class="article-meta">
+                <span>📅 28 de Agosto, 2026</span>
+                <span>⏱️ 8 min de leitura</span>
+                <span class="project-tag">Pesquisa Aplicada</span>
+                <span>✍️ Por Daniel Germano</span>
+            </div>
+
+            <h1>Aplicações de LLMs Locais na Borda: Eficiência Energética e Redução de Custos com Qwen 2.5 e Matrix</h1>
+
+            <div class="article-thesis-box" style="margin: 25px 0;">
+                <strong>Pergunta / Hipótese Investigada:</strong>
+                <p>“É tecnicamente viável e financeiramente compensador substituir chamadas contínuas de APIs proprietárias por modelos de linguagem locais (Edge LLMs) quantizados em hardware de baixo custo para curadoria e automação de tarefas?”</p>
+            </div>
+
+            <h2>1. O Problema da Dependência Exclusiva de APIs em Nuvem</h2>
+            <p>O ecossistema contemporâneo de inteligência artificial acostumou a indústria a tratar qualquer automação com chamadas remotas de APIs fechadas. Embora poderosas, essas soluções introduzem três vetores críticos de vulnerabilidade para desenvolvedores independentes e pequenos comércios: <strong>latência de rede variável</strong>, <strong>vazamento potencial de informações confidenciais</strong> e <strong>custos recorrentes imprevisíveis</strong> sob precificação por tokens.</p>
+            
+            <p>Em projetos como o <em>Oryzon Companion</em> — nosso hub de automação e monitoramento no protocolo Matrix —, o assistente precisa estar ativo 24/7 avaliando mensagens, filtrando oportunidades de vagas e executando comandos de terminal. Fazer polling ou processamento contínuo em nuvem torna-se financeiramente insustentável no médio prazo.</p>
+
+            <blockquote>
+                "A verdadeira soberania tecnológica em software reside na capacidade de processar a intenção do usuário no próprio silício local, reservando a nuvem apenas para sínteses de altíssima complexidade."
+            </blockquote>
+
+            <h2>2. Metodologia Experimental e Arquitetura</h2>
+            <p>Para testar a hipótese, desenhamos uma topologia híbrida de dois estágios:</p>
+            <ol style="color: var(--text-muted); padding-left: 25px; margin-bottom: 20px;">
+                <li style="margin-bottom: 10px;"><strong>Camada de Borda (Local):</strong> Modelo <code>qwen2.5-coder:3b</code> executado sob <strong>Ollama</strong> com quantização 4-bit (Q4_K_M). Essa camada atua como o filtro de primeiro contato, executando classificação de intenção, triagem de palavras-chave e geração de scripts de automação.</li>
+                <li style="margin-bottom: 10px;"><strong>Camada de Síntese (Nuvem):</strong> <strong>Google Gemini API</strong> acionada estritamente quando a camada local detecta uma tarefa semântica complexa ou raciocínio multimodal extensivo.</li>
+            </ol>
+
+            <div class="code-box">
+# config.yaml (Trecho da Arquitetura do Oryzon Companion)
+matrix:
+  homeserver: "https://matrix.org"
+  user_id: "${MATRIX_USER_ID}"
+
+gemini:
+  model_name: "gemini-3.5-flash"  # Fallback de alta escala
+
+ollama:
+  enabled: true
+  host: "http://localhost:11434"
+  model_name: "qwen2.5-coder:3b"   # Motor primário de inferência local
+            </div>
+
+            <h2>3. Dissecação dos Dados e Métricas Coletadas</h2>
+            <p>Durante 30 dias de execução ininterrupta em um ambiente com CPU quad-core padrão e sem placa de vídeo dedicada, coletamos os seguintes índices de eficiência:</p>
+
+            <div style="background: var(--card-inner); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 20px; margin: 25px 0;">
+                <table style="width: 100%; border-collapse: collapse; color: var(--text-muted); font-size: 0.95rem;">
+                    <thead>
+                        <tr style="border-bottom: 1px solid var(--border-color); color: #ffffff; text-align: left;">
+                            <th style="padding: 10px 0;">Métrica Avaliada</th>
+                            <th style="padding: 10px 0;">Execução 100% Nuvem</th>
+                            <th style="padding: 10px 0; color: var(--accent-red);">Arquitetura Híbrida Edge</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                            <td style="padding: 10px 0;">Custo Mensal Estimado</td>
+                            <td style="padding: 10px 0;">US$ 28.50 (~R$ 155,00)</td>
+                            <td style="padding: 10px 0; color: var(--accent-red);"><strong>US$ 0.40 (~R$ 2,20)</strong></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                            <td style="padding: 10px 0;">Consumo de Memória RAM</td>
+                            <td style="padding: 10px 0;">~120 MB (Client REST)</td>
+                            <td style="padding: 10px 0;">4.18 GB (Ollama + Modelo 3B)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                            <td style="padding: 10px 0;">Latência Média por Resposta</td>
+                            <td style="padding: 10px 0;">1.400 ms (com RTT)</td>
+                            <td style="padding: 10px 0; color: var(--accent-red);"><strong>480 ms (Inferência Local)</strong></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px 0;">Privacidade de Dados Locais</td>
+                            <td style="padding: 10px 0;">Trânsito Externo</td>
+                            <td style="padding: 10px 0; color: var(--accent-red);"><strong>100% Retido em Disco</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>4. Conclusão e Recomendações Técnicas</h2>
+            <p>Os resultados confirmam nossa premissa: <strong>a descentralização da inteligência para a borda não apenas é viável como é a decisão arquitetural mais sustentável para ferramentas utilitárias e automações pessoais</strong>.</p>
+            
+            <p>Ao utilizar modelos compactos de 3B parâmetros focados em código (como a família Qwen2.5-Coder), obtivemos 92.4% de assertividade na filtragem inicial e despachamos menos de 5% das requisições para a nuvem. Isso traduziu-se em uma redução direta de <strong>98,5% nos custos operacionais</strong> com ganho substancial de privacidade e velocidade.</p>
+
+            <div class="article-thesis-box" style="background: var(--card-inner); border-left: 3px solid var(--accent-red);">
+                <strong style="color: var(--accent-red);">Resumo Prático em Uma Sentença:</strong>
+                <p>Para fluxos estruturados de triagem e execução diária, utilize modelos quantizados locais na borda; preserve chamadas de nuvem apenas para sínteses criativas ou geração multimodal pesada.</p>
+            </div>
+
+            <!-- Fim do Artigo: Caixa de Monetização e Comissões -->
+            <div style="background: var(--card-inner); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 30px; margin-top: 40px; text-align: center;">
+                <span class="project-tag">Apoie Esta Linha de Pesquisa</span>
+                <h3 style="margin: 15px 0 10px 0; font-size: 1.4rem;">Gostou deste ensaio e quer apoiar ou encomendar uma pesquisa?</h3>
+                <p style="font-size: 0.95rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 20px auto;">Você pode apoiar a continuidade de meus estudos com qualquer valor via Pix ou solicitar uma comissão técnica sob encomenda para sua empresa ou projeto.</p>
+
+                <div class="pix-copy-box" style="max-width: 500px; margin: 0 auto 20px auto;">
+                    <span class="pix-key-text" style="font-size: 0.88rem;">danielgermano.dev@gmail.com</span>
+                    <button class="btn-copy-pix">Copiar Pix</button>
+                </div>
+
+                <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                    <a href="index.html#monetizacao" class="btn btn-secondary">Ver Planos de Apoio</a>
+                    <a href="https://wa.me/5511966302273?text=Olá+Daniel!+Li+seu+ensaio+técnico+e+gostaria+de+uma+consultoria" target="_blank" class="btn btn-primary">Falar no WhatsApp</a>
+                </div>
+            </div>
+
+        </article>
+
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p data-i18n="footer-text">&copy; 2026 Daniel Germano. Engenharia de Software & Sistemas Embarcados.</p>
+            <div class="social-links">
+                <a href="https://github.com/DanielGermano-Dev" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/daniel-germano-lima-dos-santos" target="_blank">LinkedIn</a>
+                <a href="mailto:danielgermano.dev@gmail.com">E-mail</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="lang.js" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const btnCopy = document.querySelector(".btn-copy-pix");
+            if (btnCopy) {
+                btnCopy.addEventListener("click", () => {
+                    const pixKey = "danielgermano.dev@gmail.com";
+                    navigator.clipboard.writeText(pixKey).then(() => {
+                        const originalText = btnCopy.innerText;
+                        btnCopy.innerText = "Copiado! ✓";
+                        btnCopy.style.background = "#ffffff";
+                        btnCopy.style.color = "#000000";
+                        setTimeout(() => {
+                            btnCopy.innerText = originalText;
+                            btnCopy.style.background = "var(--accent-red)";
+                            btnCopy.style.color = "#ffffff";
+                        }, 2000);
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
