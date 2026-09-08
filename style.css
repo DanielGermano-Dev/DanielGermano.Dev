@@ -113,9 +113,9 @@ header {
 }
 
 .header-container {
-    max-width: 1240px;
+    max-width: 1440px;
     margin: 0 auto;
-    padding: 16px 24px;
+    padding: 12px 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -127,6 +127,7 @@ header {
     font-weight: 700;
     letter-spacing: -1px;
     transition: var(--transition);
+    flex-shrink: 0;
 }
 
 .logo span {
@@ -139,18 +140,19 @@ header {
 
 nav {
     display: flex;
-    gap: 16px;
+    gap: 6px;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 nav a {
-    font-size: 0.92rem;
+    font-size: 0.84rem;
     font-weight: 600;
     color: var(--text-muted);
     transition: var(--transition);
-    padding: 6px 10px;
+    padding: 4px 6px;
     border-radius: 6px;
+    white-space: nowrap;
 }
 
 nav a:hover {
@@ -168,31 +170,36 @@ nav a.active {
 
 .nav-actions {
     display: flex;
-    gap: 8px;
+    gap: 4px;
     align-items: center;
+    margin-left: 6px;
+    border-left: 1px solid var(--border-color);
+    padding-left: 8px;
+    flex-shrink: 0;
 }
 
 #lang-toggle, #theme-toggle {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    color: var(--text-color);
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 700;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-muted);
+    padding: 4px 6px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
     cursor: pointer;
     transition: var(--transition);
     display: inline-flex;
     align-items: center;
-    gap: 5px;
     font-family: 'Outfit', sans-serif;
+    white-space: nowrap;
 }
 
 #lang-toggle:hover, #theme-toggle:hover {
-    border-color: var(--accent-red);
     color: var(--accent-red);
-    box-shadow: 0 0 10px var(--glow-red);
-    transform: translateY(-1px);
+    background: var(--accent-red-dim);
+    transform: none;
+    box-shadow: none;
 }
 
 /* ==========================================================================
