@@ -1,29 +1,29 @@
-// lang.js - Portfólio Daniel Germano Multi-language & Interactive Engine (PT / EN | Dark / Light)
+// lang.js - Motor de Internacionalizacao e Performance do Portfolio (Daniel Germano)
 
 const CERTIFICATES_DATA = [
     {
-        title: { pt: "Técnico em Eletrônica", en: "Electronics Technician Degree" },
-        issuer: { pt: "ETEC Júlio de Mesquita", en: "ETEC Júlio de Mesquita" },
-        date: { pt: "09/06/2026 (Concluído em 2025)", en: "06/09/2026 (Completed 2025)" },
+        title: { pt: "Tecnico em Eletronica", en: "Electronics Technician Degree" },
+        issuer: { pt: "ETEC Julio de Mesquita", en: "ETEC Julio de Mesquita" },
+        date: { pt: "09/06/2026 (Concluido em 2025)", en: "06/09/2026 (Completed 2025)" },
         image: "medias/certificates/DiplomaDeTécnicoEmEletrônica.jpg",
         link: "medias/certificates/DiplomaDeTécnicoEmEletrônica.jpg",
-        category: { pt: "Sistemas Embarcados & Eletrônica", en: "Embedded Systems & Electronics" }
+        category: { pt: "Sistemas Embarcados e Eletronica", en: "Embedded Systems and Electronics" }
     },
     {
-        title: { pt: "Fundamentos da IA Moderna: Machine Learning, LLMs, IA Generativa e Agentes", en: "Foundations of Modern AI: ML, LLMs, GenAI & Agents" },
+        title: { pt: "Fundamentos da IA Moderna: Machine Learning, LLMs e IA Generativa", en: "Foundations of Modern AI: Machine Learning, LLMs and GenAI" },
         issuer: { pt: "DIO (Digital Innovation One)", en: "DIO (Digital Innovation One)" },
         date: { pt: "06/07/2026", en: "07/06/2026" },
         image: "medias/certificates/FundamentosIAModerna.png",
         link: "medias/certificates/FundamentosIAModerna.pdf",
-        category: { pt: "Inteligência Artificial", en: "Artificial Intelligence" }
+        category: { pt: "Inteligencia Artificial", en: "Artificial Intelligence" }
     },
     {
-        title: { pt: "Potencializando Seus Estudos com IA (Chatbots, Copilotos e Agentes)", en: "Empowering Studies with AI (Chatbots, Copilots & Agents)" },
+        title: { pt: "Potencializando Estudos com Inteligencia Artificial", en: "Empowering Technical Studies with Artificial Intelligence" },
         issuer: { pt: "DIO (Digital Innovation One)", en: "DIO (Digital Innovation One)" },
         date: { pt: "06/07/2026", en: "07/06/2026" },
         image: "medias/certificates/PotencializandoEstudos.png",
         link: "medias/certificates/PotencializandoEstudos.pdf",
-        category: { pt: "Inteligência Artificial", en: "Artificial Intelligence" }
+        category: { pt: "Inteligencia Artificial", en: "Artificial Intelligence" }
     },
     {
         title: { pt: "Client x Server Connectivity", en: "Client x Server Connectivity" },
@@ -34,424 +34,402 @@ const CERTIFICATES_DATA = [
         category: { pt: "Backend", en: "Backend" }
     },
     {
-        title: { pt: "Copilotos com Inteligência Artificial", en: "AI Copilots & Autonomous Agents" },
+        title: { pt: "Copilotos com Inteligencia Artificial e Automacao", en: "AI Copilots and Intelligent Automation" },
         issuer: { pt: "DIO (Digital Innovation One)", en: "DIO (Digital Innovation One)" },
         date: { pt: "2026", en: "2026" },
         image: "medias/certificates/CertificadoCopilotosDeIA.png",
         link: "medias/certificates/CertificadoCopilotosDeIA.pdf",
-        category: { pt: "Inteligência Artificial", en: "Artificial Intelligence" }
+        category: { pt: "Inteligencia Artificial", en: "Artificial Intelligence" }
     },
     {
-        title: { pt: "Introdução à Engenharia de Prompts", en: "Introduction to Prompt Engineering" },
+        title: { pt: "Introducao a Engenharia de Prompts e Modelos de Linguagem", en: "Introduction to Prompt Engineering and Language Models" },
         issuer: { pt: "DIO (Digital Innovation One)", en: "DIO (Digital Innovation One)" },
         date: { pt: "2026", en: "2026" },
         image: "medias/certificates/CertificadoIntroducaoEngenhariaDePrompts.png",
         link: "medias/certificates/CertificadoIntroducaoEngenhariaDePrompts.pdf",
-        category: { pt: "Inteligência Artificial", en: "Artificial Intelligence" }
+        category: { pt: "Inteligencia Artificial", en: "Artificial Intelligence" }
     },
     {
         title: { pt: "Desenvolvimento Web JavaScript", en: "JavaScript Web Development" },
-        issuer: { pt: "Senac Santo André", en: "Senac Santo André" },
+        issuer: { pt: "Senac Santo Andre", en: "Senac Santo Andre" },
         date: { pt: "2024", en: "2024" },
         image: "medias/certificates/certificadosJSSENAC.png",
         link: "medias/certificates/certificadosJSSENAC.pdf",
-        category: { pt: "Front-End", en: "Front-End" }
+        category: { pt: "Frontend", en: "Frontend" }
     },
     {
-        title: { pt: "Proficiência em Inglês (TOEIC)", en: "English Proficiency (TOEIC)" },
-        issuer: { pt: "ETEC Júlio de Mesquita", en: "ETEC Júlio de Mesquita" },
+        title: { pt: "Proficiencia em Ingles (TOEIC)", en: "English Proficiency (TOEIC)" },
+        issuer: { pt: "ETEC Julio de Mesquita", en: "ETEC Julio de Mesquita" },
         date: { pt: "2023", en: "2023" },
         image: "medias/certificates/CertificadoTOEIC_ETECJM.jpg",
         link: "medias/certificates/CertificadoTOEIC_ETECJM.jpg",
         category: { pt: "Idiomas", en: "Languages" }
     },
     {
-        title: { pt: "Santander Bootcamp 2026 - Desenvolvimento & IA", en: "Santander Bootcamp 2026 - Software & AI" },
-        issuer: { pt: "DIO e Santander Open Academy", en: "DIO & Santander Open Academy" },
+        title: { pt: "Santander Bootcamp 2026 - Desenvolvimento de Software e IA", en: "Santander Bootcamp 2026 - Software Development and AI" },
+        issuer: { pt: "DIO e Santander Open Academy", en: "DIO and Santander Open Academy" },
         date: { pt: "2026", en: "2026" },
         image: "medias/certificates/Certificado1SantanderBootcamp.webp",
         link: "medias/certificates/Certificado1SantanderBootcamp.webp",
-        category: { pt: "Back-End", en: "Back-End" }
+        category: { pt: "Backend", en: "Backend" }
     },
     {
-        title: { pt: "Santander Open Academy - Introdução ao Desenvolvimento em Java", en: "Santander Open Academy - Intro to Java Development" },
-        issuer: { pt: "DIO e Santander Open Academy", en: "DIO & Santander Open Academy" },
+        title: { pt: "Santander Open Academy - Introducao ao Desenvolvimento em Java", en: "Santander Open Academy - Introduction to Java Development" },
+        issuer: { pt: "DIO e Santander Open Academy", en: "DIO and Santander Open Academy" },
         date: { pt: "2026", en: "2026" },
         image: "medias/certificates/CertificadoIntroducaoJava.png",
         link: "medias/certificates/CertificadoIntroducaoJava.pdf",
-        category: { pt: "Back-End", en: "Back-End" }
+        category: { pt: "Backend", en: "Backend" }
     },
     {
-        title: { pt: "Lançamento Santander Bootcamp 2026", en: "Launch of Santander Bootcamp 2026" },
-        issuer: { pt: "DIO e Santander Open Academy", en: "DIO & Santander Open Academy" },
+        title: { pt: "Lancamento Santander Bootcamp 2026", en: "Launch of Santander Bootcamp 2026" },
+        issuer: { pt: "DIO e Santander Open Academy", en: "DIO and Santander Open Academy" },
         date: { pt: "2026", en: "2026" },
         image: "medias/certificates/CertificadoLancamentoBootcampSantander.png",
         link: "medias/certificates/CertificadoLancamentoBootcampSantander.pdf",
-        category: { pt: "Outros", en: "Others" }
+        category: { pt: "Geral", en: "General" }
     }
 ];
 
 const translations = {
-    // =========================================================================
-    // NAVEGAÇÃO & HEADER
-    // =========================================================================
+    // NAVEGACAO E CABECALHO
     "nav-about": { pt: "Sobre", en: "About" },
     "nav-skills": { pt: "Habilidades", en: "Skills" },
     "nav-projects": { pt: "Projetos", en: "Projects" },
-    "nav-editorial": { pt: "Editorial & Ensaios", en: "Editorial & Essays" },
-    "nav-affiliates": { pt: "Loja & Afiliados", en: "Store & Affiliates" },
-    "nav-monetization": { pt: "Comissões & Apoio", en: "Commissions & Support" },
+    "nav-editorial": { pt: "Editorial e Ensaios", en: "Editorial and Essays" },
+    "nav-affiliates": { pt: "Loja e Afiliados", en: "Store and Affiliates" },
+    "nav-monetization": { pt: "Comissoes e Apoio", en: "Commissions and Support" },
     "nav-certs": { pt: "Certificados", en: "Certificates" },
-    "nav-edu": { pt: "Formação", en: "Education" },
-    "article-back-btn": { pt: "Voltar para o Editorial & Ensaios", en: "Back to Editorial & Essays" },
+    "nav-edu": { pt: "Formacao", en: "Education" },
+    "article-back-btn": { pt: "Voltar para o Editorial e Ensaios", en: "Back to Editorial and Essays" },
 
-    // =========================================================================
     // HERO
-    // =========================================================================
-    "hero-tag": { pt: "Desenvolvedor de Software & Sistemas Embarcados", en: "Software Developer & Embedded Systems Specialist" },
+    "hero-tag": { pt: "Desenvolvedor de Software e Sistemas Embarcados", en: "Software Developer and Embedded Systems Specialist" },
     "hero-title": { pt: "Daniel Germano", en: "Daniel Germano" },
     "hero-desc": { 
-        pt: "Especialista em engenharia de software, automação de hardware e firmware embarcado, unindo rigor analítico, pesquisa científica, ensaios reflexivos e literatura autoral.", 
-        en: "Specialist in software engineering, hardware automation, and embedded firmware, bridging analytical rigor, scientific research, reflective essays, and creative literature." 
+        pt: "Engenharia de software, automacao de hardware e firmware embarcado, unindo rigor analitico, pesquisa tecnica e producao textual autoral.", 
+        en: "Software engineering, hardware automation, and embedded firmware, bridging analytical rigor, technical research, and independent writing." 
     },
     "hero-btn-projects": { pt: "Ver Projetos", en: "View Projects" },
     "hero-btn-editorial": { pt: "Ler Editorial", en: "Read Editorial" },
-    "hero-btn-contact": { pt: "Comissões & Apoio", en: "Commissions & Support" },
+    "hero-btn-contact": { pt: "Comissoes e Apoio", en: "Commissions and Support" },
 
-    // =========================================================================
     // SOBRE MIM
-    // =========================================================================
     "about-title": { pt: "Sobre Mim", en: "About Me" },
     "about-p1": { 
-        pt: "Sou graduando em Engenharia de Software e formado como técnico em eletrônica pela Etec Júlio de Mesquita. Minha trajetória se constrói na intersecção entre a resolução prática de problemas e o pensamento crítico, unindo a precisão da tecnologia à capacidade reflexiva da palavra.", 
-        en: "I am an undergraduate in Software Engineering and hold a degree as an Electronics Technician from Etec Júlio de Mesquita. My trajectory is built at the intersection of practical problem-solving and critical thinking, merging technological precision with the reflective power of the written word." 
+        pt: "Sou graduando em Engenharia de Software e formado como tecnico em eletronica pela Etec Julio de Mesquita. Minha atuacao foca na solucao direta de problemas tecnicos e no desenvolvimento de ferramentas confiaveis, unindo a precisao da engenharia a clareza conceitual da escrita.", 
+        en: "I am an undergraduate in Software Engineering and hold a degree as an Electronics Technician from Etec Julio de Mesquita. My work focuses on practical problem solving and building reliable systems, uniting technical precision with clear conceptual communication." 
     },
     "about-p2": { 
-        pt: "Na área de tecnologia, possuo sólida base em hardware, desenvolvimento de software e infraestrutura. Atualmente, estou aberto a oportunidades no mercado corporativo e contratos fixos, tanto em desenvolvimento quanto em suporte e operações de TI, além de atuar no ecossistema de projetos independentes. Minha bagagem prática abrange desde a programação de circuitos e sistemas embarcados em C/C++ até a automação de rotinas, desenvolvimento backend e configuração de ambientes e redes, sempre com foco em estabilidade, diagnóstico preciso e resolução eficiente de gargalos.", 
-        en: "In technology, I have a solid foundation in hardware, software development, and infrastructure. Currently, I am open to corporate opportunities and full-time contracts in software development, technical support, and IT operations, as well as engaging in the independent project ecosystem. My practical background spans from programming circuits and embedded systems in C/C++ to routine automation, backend development, and environment/network configuration — always focusing on stability, precise diagnosis, and efficient bottleneck resolution." 
+        pt: "Na area de tecnologia, possuo base pratica em hardware, desenvolvimento de software e infraestrutura. Atualmente, estou aberto a oportunidades contratuais e posicoes corporativas em desenvolvimento de software, suporte tecnico e operacoes de TI. Minha experiencia abrange desde a programacao de circuitos e microcontroladores em C/C++ ate a automacao de rotinas em Python e manutencao de servidores.", 
+        en: "In technology, I have a practical foundation in hardware, software development, and infrastructure. Currently, I am open to contract opportunities and full-time positions in software engineering, technical support, and IT operations. My experience ranges from microcontroller programming in C/C++ to routine automation in Python and server maintenance." 
     },
     "about-p3": { 
-        pt: "Como escritor e pesquisador, sou movido pela convicção de que a informação de qualidade e o estímulo ao pensamento crítico são ferramentas indispensáveis para a transformação social. Escrevo sobre princípios, visões de mundo e educação com o objetivo de provocar pausas reflexivas, ajudando as pessoas a saírem do piloto automático e a enxergarem a realidade com mais consciência e profundidade. Estou aberto a parcerias com editoras, publicações e coletivos editoriais interessados em publicar ensaios, projetos conceituais e reflexões contemporâneas.", 
-        en: "As a writer and researcher, I am driven by the conviction that quality information and the cultivation of critical thinking are indispensable tools for social transformation. I write about principles, worldviews, and education to provoke reflective pauses, helping people step out of autopilot and perceive reality with greater awareness and depth. I am open to partnerships with publishers, publications, and editorial collectives interested in publishing essays, conceptual projects, and contemporary reflections." 
+        pt: "Como escritor e pesquisador independente, busco produzir conteudos analiticos sobre ciencia, historia, filosofia e tecnologia, incentivando o pensamento critico e a autonomia intelectual. Mantenho este espaco aberto para colaboracoes tecnicas, parcerias editoriais e projetos de engenharia.", 
+        en: "As an independent writer and researcher, I produce analytical articles on science, history, philosophy, and technology, fostering critical thinking and intellectual autonomy. I keep this space open for technical collaborations, editorial partnerships, and engineering projects." 
     },
     "about-p4": { 
-        pt: "Este espaço reúne meus serviços técnicos, projetos autorais e produções textuais. Seja para integrar sua equipe de tecnologia, viabilizar ideias no mercado editorial ou colaborar em iniciativas independentes, estou sempre à disposição para conversas produtivas.", 
-        en: "This space brings together my technical services, original projects, and written works. Whether to join your technology team, bring ideas to life in the publishing market, or collaborate on independent initiatives, I am always open to productive conversations." 
+        pt: "Este portfolio reune meus projetos tecnicos, servicos disponiveis e publicacoes autorais. Fique a vontade para entrar em contato para novas propostas e conversas profissionais.", 
+        en: "This portfolio brings together my technical projects, available services, and publications. Feel free to get in touch for new opportunities and professional inquiries." 
     },
-    "about-contact-title": { pt: "Contato & Redes", en: "Contact & Social" },
+    "about-contact-title": { pt: "Contato e Redes", en: "Contact and Social" },
 
-    // =========================================================================
-    // HABILIDADES & STACKS
-    // =========================================================================
-    "skills-title": { pt: "Habilidades & Stacks", en: "Skills & Stacks" },
-    "skills-cat1": { pt: "Linguagens & Backend", en: "Languages & Backend" },
-    "skills-cat2": { pt: "Hardware, Embarcados & IoT", en: "Hardware, Embedded & IoT" },
-    "skills-cat3": { pt: "IA Local & Infraestrutura", en: "Local AI & Infrastructure" },
-    "skills-cat4": { pt: "Design & Ferramentas", en: "Design & Tools" },
+    // HABILIDADES
+    "skills-title": { pt: "Habilidades e Stacks", en: "Skills and Stacks" },
+    "skills-cat1": { pt: "Linguagens e Backend", en: "Languages and Backend" },
+    "skills-cat2": { pt: "Hardware, Embarcados e IoT", en: "Hardware, Embedded and IoT" },
+    "skills-cat3": { pt: "IA Local e Infraestrutura", en: "Local AI and Infrastructure" },
+    "skills-cat4": { pt: "Design e Ferramentas", en: "Design and Tools" },
 
-    // =========================================================================
     // PROJETOS
-    // =========================================================================
-    "projects-title": { pt: "Projetos & Portfólio", en: "Projects & Portfolio" },
-    "projects-desc": { pt: "Projetos autorais e soluções reais desenvolvidas com foco em eficiência, estabilidade e código limpo.", en: "Original projects and real-world solutions developed with a focus on efficiency, stability, and clean code." },
+    "projects-title": { pt: "Projetos e Portfolio", en: "Projects and Portfolio" },
+    "projects-desc": { pt: "Solucoes reais e projetos autorais desenvolvidos com foco em estabilidade, eficiencia e codigo limpo.", en: "Real-world solutions and original projects developed with a focus on stability, efficiency, and clean code." },
     "proj-filter-all": { pt: "Todos os Projetos", en: "All Projects" },
-    "proj-filter-embedded": { pt: "Embarcados & IoT", en: "Embedded & IoT" },
-    "proj-filter-cli": { pt: "Automação & CLI", en: "Automation & CLI" },
-    "proj-filter-ai": { pt: "IA Local & Software", en: "Local AI & Software" },
-    "proj-filter-games": { pt: "Jogos & Web", en: "Games & Web" },
+    "proj-filter-embedded": { pt: "Embarcados e IoT", en: "Embedded and IoT" },
+    "proj-filter-cli": { pt: "Automacao e CLI", en: "Automation and CLI" },
+    "proj-filter-ai": { pt: "IA Local e Software", en: "Local AI and Software" },
+    "proj-filter-games": { pt: "Jogos e Web", en: "Games and Web" },
 
-    "proj1-tag": { pt: "IA & Automação", en: "AI & Automation" },
-    "proj1-status": { pt: "Ativo / Produção", en: "Active / Production" },
+    "proj1-tag": { pt: "IA e Automacao", en: "AI and Automation" },
+    "proj1-status": { pt: "Ativo / Producao", en: "Active / Production" },
     "proj1-desc": { 
-        pt: "Assistente autônomo e hub pessoal conectado via protocolo seguro <strong>Matrix</strong>. Integra inferência local via <strong>Ollama (Qwen 2.5-Coder)</strong> para tarefas offline e <strong>Gemini API</strong> para triagem inteligente de vagas e comandos.", 
-        en: "Autonomous assistant and personal hub connected via secure <strong>Matrix</strong> protocol. Integrates local inference via <strong>Ollama (Qwen 2.5-Coder)</strong> for offline tasks and <strong>Gemini API</strong> for smart job filtering and command routing." 
+        pt: "Assistente autonomo e hub de comandos conectado via protocolo seguro Matrix. Integra inferencia local com Ollama (Qwen 2.5-Coder) para tarefas offline e Google Gemini API para triagem e automacoes.", 
+        en: "Autonomous assistant and command hub connected via secure Matrix protocol. Integrates local inference with Ollama (Qwen 2.5-Coder) for offline tasks and Google Gemini API for triage and automation." 
     },
-    "proj1-link-code": { pt: "Ver Código &rarr;", en: "View Code &rarr;" },
-    "proj1-link-essay": { pt: "Ler Ensaio &rarr;", en: "Read Essay &rarr;" },
+    "proj1-link-code": { pt: "Ver Codigo", en: "View Code" },
+    "proj1-link-essay": { pt: "Ler Artigo", en: "Read Article" },
 
-    "proj2-tag": { pt: "GameDev", en: "GameDev" },
+    "proj2-tag": { pt: "Desenvolvimento de Jogos", en: "Game Development" },
     "proj2-status": { pt: "Top 71 LAGS", en: "Top 71 LAGS" },
     "proj2-desc": { 
-        pt: "Jogo 2D autoral em equipe desenvolvido para a <strong>Latin American Game Showcase (LAGS)</strong>, destacando-se entre mais de 120 participantes de toda a América Latina.", 
-        en: "Original 2D team-developed indie game for the <strong>Latin American Game Showcase (LAGS)</strong>, standing out among over 120 competitors across Latin America." 
+        pt: "Jogo 2D desenvolvido em equipe para a Latin American Game Showcase (LAGS), alcancando destaque entre mais de 120 participantes.", 
+        en: "2D indie game developed in a team for the Latin American Game Showcase (LAGS), achieving recognition among over 120 competitors." 
     },
-    "proj2-link": { pt: "Jogar no Itch.io &rarr;", en: "Play on Itch.io &rarr;" },
+    "proj2-link": { pt: "Jogar no Itch.io", en: "Play on Itch.io" },
 
-    "proj3-tag": { pt: "Eletrônica & IoT", en: "Electronics & IoT" },
+    "proj3-tag": { pt: "Eletronica e IoT", en: "Electronics and IoT" },
     "proj3-status": { pt: "Hardware Real", en: "Real Hardware" },
     "proj3-desc": { 
-        pt: "Desenvolvimento de hardware embarcado e circuito impresso para monitoramento térmico contínuo, telemetria em tempo real e controle de tração no TCC de Eletrônica.", 
+        pt: "Projeto de hardware embarcado e circuito impresso para monitoramento termico continuo, telemetria em tempo real e controle de tracao no TCC de Eletronica.", 
         en: "Embedded hardware design and custom PCB development for continuous thermal monitoring, real-time telemetry, and traction control for Electronics Capstone." 
     },
-    "proj3-link": { pt: "Ver Simulação &rarr;", en: "View Simulation &rarr;" },
+    "proj3-link": { pt: "Ver Simulacao", en: "View Simulation" },
 
-    "proj4-tag": { pt: "Automação CLI", en: "CLI Automation" },
+    "proj4-tag": { pt: "Automacao CLI", en: "CLI Automation" },
     "proj4-status": { pt: "SysAdmin", en: "SysAdmin" },
     "proj4-desc": { 
-        pt: "Ferramenta executável de alta velocidade para manutenção de discos locais e servidores Nextcloud Dockerizados, executando expurgo de lixeiras e histórico de versões via OCC.", 
-        en: "High-speed CLI executable for local disk maintenance and Dockerized Nextcloud server upkeep, executing trash purge and version cleanups via OCC." 
+        pt: "Utilitario de linha de comando para manutencao de discos locais e servidores Nextcloud Dockerizados, executando rotinas de limpeza via OCC.", 
+        en: "CLI utility for local disk maintenance and Dockerized Nextcloud server upkeep, executing cleanup routines via OCC." 
     },
 
     "proj5-tag": { pt: "Performance CLI", en: "CLI Performance" },
     "proj5-status": { pt: "Algoritmo", en: "Algorithm" },
     "proj5-desc": { 
-        pt: "Motor de análise e desduplicação de arquivos em múltiplos discos. Emprega estratégia em dois níveis: pré-filtragem por tamanho e conferência estrita de <strong>MD5 Hash</strong>.", 
-        en: "File deduplication and disk analysis engine across multiple drives. Implements a two-tier strategy: fast file-size prefiltering and strict <strong>MD5 Hash</strong> verification." 
+        pt: "Motor de analise e desduplicacao de arquivos em multiplos discos, utilizando filtragem preliminar por tamanho e comparacao rigorosa via hash MD5.", 
+        en: "File analysis and deduplication engine across multiple disks, utilizing size prefiltering and strict MD5 hash verification." 
     },
 
     "proj6-tag": { pt: "Soberania Digital", en: "Digital Sovereignty" },
     "proj6-status": { pt: "Infraestrutura", en: "Infrastructure" },
     "proj6-desc": { 
-        pt: "Infraestrutura pessoal de containerização com Docker, orquestrando modelos de IA locais (Ollama / Qwen 2.5) e armazenamento privado Nextcloud com foco em privacidade total.", 
-        en: "Personal self-hosted infrastructure containerized with Docker, orchestrating local AI models (Ollama / Qwen 2.5) and private Nextcloud cloud storage with zero-leak privacy." 
+        pt: "Infraestrutura pessoal containerizada com Docker, orquestrando modelos de IA locais e armazenamento privado Nextcloud com foco em privacidade.", 
+        en: "Personal infrastructure containerized with Docker, orchestrating local AI models and private Nextcloud cloud storage with a focus on privacy." 
     },
 
     "proj7-tag": { pt: "Backend / C#", en: "Backend / C#" },
-    "proj7-status": { pt: "Concluído", en: "Completed" },
+    "proj7-status": { pt: "Concluido", en: "Completed" },
     "proj7-desc": { 
-        pt: "Aplicação CLI matemática robusta em C# com operações complexas, teoremas matemáticos (triângulo retângulo) e um sistema de tabuada interativo infinito.", 
-        en: "Robust mathematical CLI application in C# featuring complex operations, geometric theorems (right triangle), and an interactive infinite multiplication trainer." 
+        pt: "Aplicacao CLI matematica em C# desenvolvida para operacoes aritmeticas compostas, calculos geometricos e treino interativo.", 
+        en: "Mathematical CLI application in C# developed for compound arithmetic operations, geometric calculations, and interactive training." 
     },
 
-    "proj8-tag": { pt: "Finanças / Python", en: "Finances / Python" },
-    "proj8-status": { pt: "Concluído", en: "Completed" },
+    "proj8-tag": { pt: "Financas / Python", en: "Finances / Python" },
+    "proj8-status": { pt: "Concluido", en: "Completed" },
     "proj8-desc": { 
-        pt: "Calculadora de taxas de importação baseada em legislação nacional e estadual (IOF/ICMS) com integração em tempo real a APIs de câmbio de moedas.", 
-        en: "Import duty & tax calculator built in Python compliant with national and state tax laws (IOF/ICMS), featuring real-time currency exchange API integration." 
+        pt: "Calculadora de taxas de importacao e tributos (IOF e ICMS) com integracao a APIs de cambio de moedas em tempo real.", 
+        en: "Import tax and duty calculator (IOF and ICMS) with real-time currency exchange API integration." 
     },
 
     "proj9-tag": { pt: "Produtividade", en: "Productivity" },
-    "proj9-status": { pt: "Concluído", en: "Completed" },
+    "proj9-status": { pt: "Concluido", en: "Completed" },
     "proj9-desc": { 
-        pt: "Assistente pessoal automatizado em Python que gera agendas e rotinas diárias personalizadas em Markdown a partir de especificações estruturadas em JSON.", 
-        en: "Automated personal assistant in Python generating custom structured daily schedules and routines in Markdown from JSON specifications." 
+        pt: "Assistente pessoal automatizado em Python que gera rotinas diarias personalizadas em formato Markdown a partir de definicoes em JSON.", 
+        en: "Automated personal assistant in Python that generates customized daily routines in Markdown from JSON definitions." 
     },
 
     "proj10-tag": { pt: "Web ARG", en: "Web ARG" },
     "proj10-status": { pt: "Em Desenvolvimento", en: "In Development" },
     "proj10-desc": { 
-        pt: "Website interativo e imersivo com elementos de ARG (Alternate Reality Game), enigmas sonoros, pistas criptografadas e narrativa ramificada inspirada em mistérios de terror.", 
-        en: "Immersive interactive website featuring ARG (Alternate Reality Game) mechanics, audio puzzles, cryptographic clues, and branching storylines." 
+        pt: "Website interativo com mecanicas de Alternate Reality Game (ARG), enigmas sonoros, pistas criptografadas e narrativa em ramificacoes.", 
+        en: "Interactive website featuring Alternate Reality Game (ARG) mechanics, audio puzzles, encrypted clues, and branching storylines." 
     },
 
     "proj11-tag": { pt: "Plataforma Web", en: "Web Platform" },
-    "proj11-status": { pt: "Em Produção", en: "In Production" },
+    "proj11-status": { pt: "Em Producao", en: "In Production" },
     "proj11-desc": { 
-        pt: "Ecossistema digital institucional e catálogo de serviços de software e eletrônica, integrando documentação de projetos e canais diretos de suporte.", 
-        en: "Institutional digital ecosystem and service catalog for software and electronics, integrating project documentation and direct support channels." 
+        pt: "Portal institucional e catalogo de servicos tecnicos de software e hardware, integrando documentacao e canais de contato.", 
+        en: "Institutional portal and technical service catalog for software and hardware, integrating documentation and direct contact channels." 
     },
-    "proj11-link": { pt: "Visitar Portal &rarr;", en: "Visit Portal &rarr;" },
+    "proj11-link": { pt: "Visitar Portal", en: "Visit Portal" },
 
-    "proj12-tag": { pt: "DevOps & Linux", en: "DevOps & Linux" },
-    "proj12-status": { pt: "Concluído", en: "Completed" },
+    "proj12-tag": { pt: "DevOps e Linux", en: "DevOps and Linux" },
+    "proj12-status": { pt: "Concluido", en: "Completed" },
     "proj12-desc": { 
-        pt: "Coleção de scripts Bash e utilitários de linha de comando para automação de tarefas de sysadmin, backups automatizados com compressão tar/gzip e sincronização remota via rsync.", 
-        en: "Collection of Bash scripts and CLI utilities for sysadmin automation, automated compressed tar/gzip backups, and remote synchronization via rsync." 
+        pt: "Colecao de scripts em Bash e utilitarios para automacao de rotinas sysadmin, backups compactados e sincronizacao remota.", 
+        en: "Collection of Bash scripts and utilities for sysadmin automation, compressed backups, and remote synchronization." 
     },
 
-    // =========================================================================
-    // EDITORIAL / BLOG MULTIDISCIPLINAR
-    // =========================================================================
-    "editorial-title": { pt: "Editorial, Ensaios & Literatura", en: "Editorial, Essays & Literature" },
+    // EDITORIAL
+    "editorial-title": { pt: "Editorial, Ensaios e Literatura", en: "Editorial, Essays and Literature" },
     "editorial-intro-p": { 
-        pt: "Espaço aberto para dissecar hipóteses técnicas, compartilhar entendimentos filosóficos, análises históricas, políticas e sociais, crônicas de jornalismo esportivo e criações literárias autorais (contos e poemas).", 
-        en: "An open space to dissect technical hypotheses, share philosophical reflections, historical, political, and social analyses, sports journalism chronicles, and original creative literature (short stories and poems)." 
+        pt: "Publicacoes tecnicas, pesquisas aplicadas, reflexoes filosoficas, analises historicas e producoes literarias autorais.", 
+        en: "Technical publications, applied research, philosophical essays, historical analyses, and independent literature." 
     },
     "edit-filter-all": { pt: "Todos os Textos", en: "All Texts" },
-    "edit-filter-opiniao": { pt: "Opinião Pessoal", en: "Personal Opinion" },
+    "edit-filter-opiniao": { pt: "Opiniao Pessoal", en: "Personal Opinion" },
     "edit-filter-esportes": { pt: "Jornalismo Esportivo", en: "Sports Journalism" },
-    "edit-filter-ciencia": { pt: "Pesquisa Científica", en: "Scientific Research" },
-    "edit-filter-historia": { pt: "Fatos Históricos", en: "Historical Facts" },
-    "edit-filter-literatura": { pt: "Poemas e Contos", en: "Poems & Short Stories" },
-    "editorial-read-btn": { pt: "Ler Texto Completo &rarr;", en: "Read Full Text &rarr;" },
+    "edit-filter-ciencia": { pt: "Pesquisa Cientifica", en: "Scientific Research" },
+    "edit-filter-historia": { pt: "Fatos Historicos", en: "Historical Facts" },
+    "edit-filter-literatura": { pt: "Poemas e Contos", en: "Poems and Short Stories" },
+    "editorial-read-btn": { pt: "Ler Artigo Completo", en: "Read Full Article" },
 
     "art1-title": { 
-        pt: "Aplicações de LLMs Locais na Borda: Eficiência Energética e Redução de Custos com Qwen 2.5 e Matrix", 
-        en: "Edge LLM Applications: Energy Efficiency & Cost Reduction with Qwen 2.5 and Matrix" 
+        pt: "Aplicacoes de LLMs Locais na Borda: Eficiencia Energetica e Reducao de Custos com Qwen 2.5 e Matrix", 
+        en: "Edge LLM Applications: Energy Efficiency and Cost Reduction with Qwen 2.5 and Matrix" 
     },
     "art1-hypo": { 
-        pt: "<strong>Pergunta / Hipótese:</strong> “É tecnicamente viável e financeiramente compensador substituir chamadas de APIs proprietárias por modelos locais quantizados em hardware de baixo custo?”", 
-        en: "<strong>Research Hypothesis:</strong> “Is it technically viable and cost-effective to replace proprietary cloud API calls with quantized local models on low-cost hardware?”" 
+        pt: "<strong>Hipotese Investigada:</strong> E tecnicamente viavel e vantajoso substituir chamadas de APIs em nuvem por modelos locais quantizados em hardware de baixo custo para tarefas de rotina?", 
+        en: "<strong>Research Hypothesis:</strong> Is it technically viable and cost-effective to replace cloud API calls with quantized local models on low-cost hardware for routine automation?" 
     },
     "art1-excerpt": { 
-        pt: "Análise quantitativa de consumo de VRAM, latência de inferência e viabilidade econômica ao executar modelos de 1.5B a 7B parâmetros para automação de tarefas cotidianas em comparação com APIs em nuvem.", 
-        en: "Quantitative benchmark on VRAM footprint, inference latency, and economic viability when deploying 1.5B to 7B parameter models for daily task automation compared to cloud APIs." 
+        pt: "Analise tecnica de consumo de VRAM, latencia de inferencia e viabilidade economica de modelos locais quantizados de 1.5B a 7B parametros.", 
+        en: "Technical benchmark on VRAM usage, inference latency, and economic viability of quantized local models from 1.5B to 7B parameters." 
     },
 
     "art2-title": { 
-        pt: "A Ilusão da Hiperconectividade e a Fragmentação do Pensamento Crítico", 
+        pt: "A Ilusao da Hiperconectividade e a Fragmentacao do Pensamento Critico", 
         en: "The Illusion of Hyperconnectivity and the Fragmentation of Critical Thinking" 
     },
     "art2-hypo": { 
-        pt: "<strong>Reflexão Central:</strong> “A saturação de estímulos rápidos e dopaminérgicos nas redes está corroendo nossa capacidade de sustentação do pensamento profundo?”", 
-        en: "<strong>Core Reflection:</strong> “Is the saturation of fast-paced dopaminergic stimuli across social feeds eroding our capacity for deep, sustained contemplation?”" 
+        pt: "<strong>Reflexao Central:</strong> A saturacao de estimulos rapidos em plataformas digitais afeta a capacidade humana de sustentacao do foco profundo?", 
+        en: "<strong>Core Reflection:</strong> Does the saturation of rapid stimuli across digital platforms erode the human capacity for sustained deep focus?" 
     },
     "art2-excerpt": { 
-        pt: "Um ensaio reflexivo sobre a necessidade de resgatar o silêncio e a concentração prolongada em uma era dominada pela economia da atenção, algoritmos de retenção e superficialidade discursiva.", 
-        en: "A philosophical essay examining the urgent need to reclaim silence and sustained focus in an era dominated by the attention economy, retention algorithms, and discursive superficiality." 
+        pt: "Ensaio sobre o valor do foco ininterrupto, a economia da atencao e a necessidade de habitos deliberados de concentracao.", 
+        en: "An essay examining the value of sustained focus, the attention economy, and the necessity of deliberate offline habits." 
     },
 
     "art3-title": { 
-        pt: "A Descentralização da Informação e a Queda de Paradigmas: Lições da História Moderna", 
+        pt: "A Descentralizacao da Informacao e a Queda de Paradigmas: Licoes da Historia Moderna", 
         en: "Information Decentralization and Paradigm Shifts: Lessons from Modern History" 
     },
     "art3-hypo": { 
-        pt: "<strong>Análise Histórica:</strong> “Como a evolução dos meios de difusão de conhecimento — da imprensa de Gutenberg ao open-source — redesenhou o poder social?”", 
-        en: "<strong>Historical Analysis:</strong> “How the evolution of knowledge distribution mechanisms — from Gutenberg's press to open-source — reshaped social power structures.”" 
+        pt: "<strong>Analise Historica:</strong> Como a evolucao dos meios de transmissao de dados moldou as transformacoes sociais e politicas da sociedade?", 
+        en: "<strong>Historical Analysis:</strong> How the evolution of data transmission mechanisms historically shaped societal and political transformations." 
     },
     "art3-excerpt": { 
-        pt: "Uma investigação sobre como a quebra do monopólio da distribuição do saber historicamente acelerou revoluções científicas e por que o software livre e o hardware aberto são os pilares da soberania contemporânea.", 
-        en: "An investigation into how breaking knowledge monopolies historically sparked scientific revolutions, and why free software and open hardware are pillars of modern sovereignty." 
+        pt: "Estudo comparativo entre a revolucao da prensa de tipos moveis de Gutenberg e a ascensao do ecossistema de codigo aberto e redes federadas.", 
+        en: "A comparative study between Gutenberg's movable type printing revolution and the rise of open source and federated protocols." 
     },
 
     "art4-title": { 
-        pt: "A Geometria dos Espaços: Como a Análise Quantitativa e a Tática Redefiniram o Futebol Moderno", 
+        pt: "A Geometria dos Espacos: Como a Analise Quantitativa e a Tatica Redefiniram o Futebol Moderno", 
         en: "The Geometry of Space: How Quantitative Analytics and Tactics Redefined Modern Football" 
     },
     "art4-hypo": { 
-        pt: "<strong>Abordagem Tática:</strong> “O futebol moderno tornou-se uma partida de xadrez espacial onde a ocupação de zonas e os dados superam o improviso individual?”", 
-        en: "<strong>Tactical Investigation:</strong> “Has modern football evolved into spatial chess where positional play and telemetry data take precedence over pure individual improvisation?”" 
+        pt: "<strong>Abordagem Tatica:</strong> O futebol de elite tornou-se um jogo posicional onde a ocupacao de zonas e a telemetria potencializam a tomada de decisao?", 
+        en: "<strong>Tactical Investigation:</strong> Has elite football evolved into a positional structure where zone occupation and telemetry empower tactical decision making?" 
     },
     "art4-excerpt": { 
-        pt: "Crônica tática e analítica sobre a evolução dos esquemas posicionais, o conceito de 'espaço entre linhas', a métrica de Expected Goals (xG) e o equilíbrio entre a arte do drible e a disciplina tática.", 
-        en: "A tactical chronicle exploring positional play evolutions, half-space dynamics, Expected Goals (xG) metrics, and the delicate equilibrium between creative dribbling and tactical discipline." 
+        pt: "Cronica analitica sobre esquemas posicionais, ocupacao de meios-espacos e a integracao entre dados estatisticos e a tecnica individual.", 
+        en: "Analytical chronicle exploring positional play, half-space dynamics, and the integration of data metrics with individual technique." 
     },
 
     "art5-title": { 
-        pt: "O Silêncio dos Transistores & O Eco da Madrugada", 
-        en: "The Silence of Transistors & The Midnight Echo" 
+        pt: "O Silencio dos Transistores e o Eco da Madrugada", 
+        en: "The Silence of Transistors and the Midnight Echo" 
     },
     "art5-hypo": { 
-        pt: "<strong>Poema Autoral:</strong> “Na dança dos elétrons e no calor da solda, reside a poesia discreta da criação.”", 
-        en: "<strong>Original Poem:</strong> “In the subtle dance of electrons and the heat of solder lies the quiet poetry of creation.”" 
+        pt: "<strong>Criacao Autoral:</strong> Reflexoes poeticas sobre a construcao material, circuitos integrados e a solidao criativa na bancada de testes.", 
+        en: "<strong>Original Creation:</strong> Poetic reflections on hardware tinkering, integrated circuits, and creative solitude in technical work." 
     },
     "art5-excerpt": { 
-        pt: "Coletânea de versos e prosas poéticas que exploram a solidão da bancada de eletrônica, o brilho verde dos LEDs no escuro e a busca humana por significado através das linhas de código e circuitos integrados.", 
-        en: "A poetic anthology exploring the solitude of late-night hardware tinkering, the soft green glow of LEDs in the dark, and humanity's quest for purpose through code and silicon." 
+        pt: "Coletanea de versos e prosas que exploram a relacao entre a exatidao das ciencias aplicadas e a sensibilidade artistica.", 
+        en: "A collection of verses exploring the relationship between applied science exactness and artistic sensibility." 
     },
 
-    // =========================================================================
-    // LOJA GEEK & AFILIADOS
-    // =========================================================================
-    "affiliates-title": { pt: "Geek & Tech Hub | Recomendações & Afiliados", en: "Geek & Tech Hub | Recommendations & Affiliates" },
+    // LOJA E AFILIADOS
+    "affiliates-title": { pt: "Geek e Tech Hub: Recomendacoes e Afiliados", en: "Geek and Tech Hub: Recommendations and Affiliates" },
     "affiliates-desc": { 
-        pt: "Produtos testados e selecionados a dedo para desenvolvedores, makers, gamers e entusiastas de tecnologia. Comprando pelos links abaixo, você apoia diretamente a manutenção dos meus projetos e pesquisas sem pagar nada a mais por isso.", 
-        en: "Hand-picked and tested gear for developers, makers, gamers, and tech enthusiasts. Buying through the links below directly supports my research and open-source projects at no extra cost to you." 
+        pt: "Componentes eletronicos, perifericos e livros recomendados para desenvolvimento e projetos maker. Ao adquirir atraves dos links, voce apoia este portfolio sem nenhum custo adicional.", 
+        en: "Hand-picked electronic components, peripherals, and technical books. Purchasing through these links directly supports this portfolio at no additional cost." 
     },
     "aff-filter-all": { pt: "Todos os Itens", en: "All Items" },
-    "aff-filter-electronics": { pt: "Eletrônicos & IoT", en: "Electronics & IoT" },
-    "aff-filter-setup": { pt: "Setup & Periféricos", en: "Desk Setup & Peripherals" },
-    "aff-filter-games": { pt: "Games & Geek", en: "Games & Geek" },
-    "aff-filter-books": { pt: "Livros & Leituras", en: "Books & Readings" },
-    "aff-btn-buy": { pt: "Comprar na Shopee", en: "Buy on Shopee" },
-    "aff-disclaimer-title": { pt: "Transparência e Política de Afiliação", en: "Transparency & Affiliate Policy" },
+    "aff-filter-electronics": { pt: "Eletronicos e IoT", en: "Electronics and IoT" },
+    "aff-filter-setup": { pt: "Setup e Perifericos", en: "Desk Setup and Peripherals" },
+    "aff-filter-games": { pt: "Jogos e Geek", en: "Games and Geek" },
+    "aff-filter-books": { pt: "Livros e Leituras", en: "Books and Readings" },
+    "aff-btn-buy": { pt: "Acessar Oferta", en: "View Item" },
+    "aff-disclaimer-title": { pt: "Politica de Transparencia", en: "Transparency Policy" },
     "aff-disclaimer-p": { 
-        pt: "Ao comprar através dos links recomendados nesta página, recebo uma pequena comissão das plataformas parceiras (como Shopee, Amazon e AliExpress). O valor do produto <strong>permanece exatamente o mesmo para você</strong>, com eventuais descontos e cupons ativos. Esse suporte me ajuda a continuar investindo em componentes para novos testes de hardware, servidores locais e publicações abertas de pesquisa.", 
-        en: "By purchasing through recommended links on this page, I may receive a small commission from affiliate partner platforms (such as Shopee, Amazon, and AliExpress). The price of the product <strong>remains exactly the same for you</strong>, along with any active discounts and coupons. This support helps fund components for new hardware experiments, local server infrastructure, and open research publications." 
+        pt: "Ao comprar atraves dos links listados, este espaco pode receber uma comissao das plataformas parceiras. O valor do produto permanece exatamente o mesmo para voce. Esse apoio auxilia na aquisicao de novos componentes para testes de hardware e manutencao de servidores.", 
+        en: "Purchasing through recommended links may generate a small commission from partner platforms. The price remains unchanged for you. This support helps fund components for hardware experiments and server maintenance." 
     },
 
-    "aff1-title": { pt: "Módulo ESP32 Wi-Fi + Bluetooth", en: "ESP32 Wi-Fi + Bluetooth Dev Board" },
-    "aff1-desc": { pt: "Microcontrolador dual-core essencial para automação residencial, IoT e prototipagem de firmware de alto desempenho.", en: "Dual-core microcontroller essential for smart home automation, IoT, and high-performance embedded firmware." },
+    "aff1-title": { pt: "Modulo ESP32 Wi-Fi e Bluetooth", en: "ESP32 Wi-Fi and Bluetooth Dev Board" },
+    "aff1-desc": { pt: "Microcontrolador dual-core indicado para automacao residencial, projetos de IoT e prototipagem de firmware.", en: "Dual-core microcontroller recommended for smart home projects, IoT development, and firmware prototyping." },
 
-    "aff2-title": { pt: "Estação de Solda com Temperatura Ajustável", en: "Adjustable Temperature Soldering Station" },
-    "aff2-desc": { pt: "Equipamento fundamental para bancada eletrônica, montagem de placas PCB e reparo preciso de circuitos integrados.", en: "Essential equipment for electronics workbenches, custom PCB assembly, and precise integrated circuit repairs." },
+    "aff2-title": { pt: "Estacao de Solda com Temperatura Ajustavel", en: "Adjustable Temperature Soldering Station" },
+    "aff2-desc": { pt: "Equipamento para bancada de eletronica, montagem de placas de circuito impresso e reparos.", en: "Essential equipment for electronics workbenches, PCB assembly, and precision repairs." },
 
-    "aff3-title": { pt: "Multímetro Digital Automático True-RMS", en: "True-RMS Auto-Ranging Digital Multimeter" },
-    "aff3-desc": { pt: "Instrumento de medição de alta precisão para tensão, corrente, continuidade com bip sonoro e teste de componentes.", en: "High-precision measurement instrument for voltage, current, audio continuity check, and component diagnostics." },
+    "aff3-title": { pt: "Multimetro Digital Automatico True-RMS", en: "True-RMS Auto-Ranging Digital Multimeter" },
+    "aff3-desc": { pt: "Instrumento para medicao precisa de tensao, corrente, continuidade e teste de componentes.", en: "Instrument for precise voltage, current, continuity, and component diagnostics." },
 
-    "aff4-title": { pt: "Kit Arduino Uno R3 Completo com Sensores", en: "Complete Arduino Uno R3 Starter Kit with Sensors" },
-    "aff4-desc": { pt: "Kit completo com display LCD, relés, servo-motores, jumpers e sensores para aprendizado prático e automação.", en: "Comprehensive kit with LCD display, relays, servos, jumpers, and sensor modules for hands-on maker learning." },
+    "aff4-title": { pt: "Kit Arduino Uno R3 Completo com Sensores", en: "Arduino Uno R3 Starter Kit with Sensors" },
+    "aff4-desc": { pt: "Kit com display LCD, reles, motores, cabos e modulos para aprendizado e automacao.", en: "Comprehensive kit with LCD, relays, motors, jumpers, and sensor modules for maker learning." },
 
-    "aff5-title": { pt: "Teclado Mecânico Compacto Switch Hot-Swap", en: "Compact Hot-Swappable Mechanical Keyboard" },
-    "aff5-desc": { pt: "Excelente resposta tátil e ergonomia superior para longas sessões de programação, escrita técnica e digitação.", en: "Crisp tactile feedback and superior ergonomics for marathon coding sessions, technical writing, and gaming." },
+    "aff5-title": { pt: "Teclado Mecanico Compacto", en: "Compact Mechanical Keyboard" },
+    "aff5-desc": { pt: "Teclado com switches hot-swap e resposta tatil para longas rotinas de programacao e escrita.", en: "Keyboard featuring hot-swappable switches and tactile feedback for extended coding sessions." },
 
-    "aff6-title": { pt: "Mouse Ergonômico de Alta Precisão", en: "High-Precision Ergonomic Mouse" },
-    "aff6-desc": { pt: "Sensor óptico de alta resolução e pegada ergonômica para evitar fadiga durante jornadas de trabalho prolongadas.", en: "High-resolution optical sensor with ergonomic grip to prevent wrist fatigue during extended work sessions." },
+    "aff6-title": { pt: "Mouse Ergonomico de Alta Precisao", en: "High-Precision Ergonomic Mouse" },
+    "aff6-desc": { pt: "Sensor optico de alta resolucao e formato ergonomico para conforto durante o trabalho.", en: "High-resolution optical sensor with ergonomic grip for comfort during long work hours." },
 
-    "aff7-title": { pt: "Hub USB-C Multifuncional 8 em 1", en: "8-in-1 Multifunctional USB-C Hub" },
-    "aff7-desc": { pt: "Expansão de portas com saída HDMI 4K, portas USB 3.0 rápidas, leitor de cartão SD e fornecimento de energia PD.", en: "Port expansion hub featuring 4K HDMI, ultra-fast USB 3.0 ports, SD card readers, and PD power delivery." },
+    "aff7-title": { pt: "Hub USB-C Multifuncional", en: "Multifunctional USB-C Hub" },
+    "aff7-desc": { pt: "Expansao de portas com saida HDMI 4K, portas USB 3.0, leitor de cartao SD e alimentacao PD.", en: "Port expansion featuring 4K HDMI, USB 3.0 ports, SD card reader, and PD power delivery." },
 
-    "aff8-title": { pt: "Luminária de Monitor LED Anti-Reflexo", en: "Anti-Glare LED Screenbar Monitor Light" },
-    "aff8-desc": { pt: "Iluminação focal para sua mesa sem causar reflexos na tela, reduzindo o cansaço visual em noites de trabalho.", en: "Focal desk illumination without screen reflections, drastically reducing eye strain during night shifts." },
+    "aff8-title": { pt: "Luminaria de Monitor LED", en: "Anti-Glare LED Monitor Light" },
+    "aff8-desc": { pt: "Iluminacao frontal para mesa sem reflexo na tela, reduzindo o cansaco visual.", en: "Desk illumination without screen reflections, helping reduce eye strain." },
 
-    "aff9-title": { pt: "Livro: Código Limpo (Robert C. Martin)", en: "Book: Clean Code (Robert C. Martin)" },
-    "aff9-desc": { pt: "Guia indispensável de boas práticas, refatoração e arquitetura para todo desenvolvedor de software moderno.", en: "Indispensable software engineering classic on best practices, refactoring, and crafting readable, maintainable code." },
+    "aff9-title": { pt: "Livro: Codigo Limpo (Robert C. Martin)", en: "Book: Clean Code (Robert C. Martin)" },
+    "aff9-desc": { pt: "Guia de boas praticas, legibilidade e arquitetura de software para desenvolvedores.", en: "Classic guide on software engineering practices, refactoring, and code readability." },
 
     "aff10-title": { pt: "Livro: Entendendo Algoritmos (Aditya Bhargava)", en: "Book: Grokking Algorithms (Aditya Bhargava)" },
-    "aff10-desc": { pt: "Explicação visual e didática das principais estruturas de dados, buscas, grafos e algoritmos essenciais.", en: "An illustrated, highly didactic guide explaining fundamental data structures, search algorithms, graphs, and sorting." },
+    "aff10-desc": { pt: "Introducao didatica e visual sobre estruturas de dados, buscas e algoritmos essenciais.", en: "Illustrated guide explaining fundamental data structures, search algorithms, and sorting." },
 
-    "aff11-title": { pt: "Gamepad Sem Fio Multiplataforma (PC/Mobile)", en: "Multiplatform Wireless Gamepad (PC/Mobile)" },
-    "aff11-desc": { pt: "Controle preciso com baixa latência e empunhadura ergonômica, ideal para testes de gamedev e sessões de jogos.", en: "Low-latency wireless controller with ergonomic grip, ideal for game development playtesting and gaming." },
+    "aff11-title": { pt: "Controle Sem Fio Multiplataforma", en: "Multiplatform Wireless Controller" },
+    "aff11-desc": { pt: "Controle ergonomico para testes de jogos em PC e dispositivos moveis.", en: "Ergonomic controller for game testing and play on PC and mobile devices." },
 
-    "aff12-title": { pt: "Mousepad Gamer Extra Grande Speed (90x40cm)", en: "Extra Large XXL Desk Mousepad (90x40cm)" },
-    "aff12-desc": { pt: "Superfície micro-texturizada suave para teclado e mouse, com bordas costuradas e base de borracha antiderrapante.", en: "Smooth micro-textured desk surface for keyboard and mouse with reinforced stitched edges and non-slip rubber base." },
+    "aff12-title": { pt: "Mousepad Grande (90x40cm)", en: "Large Desk Mousepad (90x40cm)" },
+    "aff12-desc": { pt: "Superficie uniforme para teclado e mouse com base emborrachada antiderrapante.", en: "Smooth surface for keyboard and mouse with non-slip rubber base." },
 
-    // =========================================================================
-    // MONETIZAÇÃO & COMISSÕES
-    // =========================================================================
-    "monetization-title": { pt: "Comissões & Apoio Contínuo", en: "Commissions & Support" },
+    // MONETIZACAO
+    "monetization-title": { pt: "Comissoes e Apoio", en: "Commissions and Support" },
     "monetization-desc": { 
-        pt: "Monetizo meus conhecimentos através de serviços de desenvolvimento sob medida, consultorias técnicas e planos de apoio contínuo para manter minhas pesquisas e produções abertas à comunidade.", 
-        en: "I monetize my expertise through custom software development, technical consulting, and recurring subscription tiers to keep my research and publications open to the community." 
+        pt: "Servicos de desenvolvimento de software sob demanda, consultoria tecnica e planos de apoio para manutencao das publicacoes abertas.", 
+        en: "Custom software development services, technical consulting, and patronage tiers to support open publications." 
     },
     "tier1-title": { pt: "Leitor Apoiador", en: "Reader Supporter" },
-    "tier1-period": { pt: "R$ 15 / mês", en: "$3.00 / month" },
-    "tier1-feat1": { pt: "Acesso antecipado a novos ensaios e pesquisas", en: "Early access to new essays and research drafts" },
-    "tier1-feat2": { pt: "Nome citado nos agradecimentos das publicações", en: "Name listed in publication acknowledgments" },
-    "tier1-feat3": { pt: "Canal exclusivo para sugestão de tópicos e temas", en: "Exclusive channel for topic and research suggestions" },
+    "tier1-period": { pt: "R$ 15 / mes", en: "$3.00 / month" },
+    "tier1-feat1": { pt: "Acesso antecipado a novos artigos e pesquisas", en: "Early access to new articles and research notes" },
+    "tier1-feat2": { pt: "Nome citado nos agradecimentos das publicacoes", en: "Name listed in publication acknowledgments" },
+    "tier1-feat3": { pt: "Canal para envio de sugestoes de topicos", en: "Direct channel for suggesting research topics" },
 
-    "tier2-title": { pt: "Patrono de Pesquisa & Tech", en: "Research & Tech Patron" },
-    "tier2-period": { pt: "R$ 45 / mês", en: "$9.00 / month" },
-    "tier2-feat1": { pt: "Todos os benefícios do plano Leitor Apoiador", en: "All benefits from Reader Supporter tier" },
-    "tier2-feat2": { pt: "Acesso a repositórios privados e scripts de automação", en: "Access to private repositories and automation scripts" },
-    "tier2-feat3": { pt: "Relatórios detalhados de benchmarks de hardware & IA", en: "Detailed hardware & AI benchmark deep-dive reports" },
+    "tier2-title": { pt: "Patrono de Pesquisa", en: "Research Patron" },
+    "tier2-period": { pt: "R$ 45 / mes", en: "$9.00 / month" },
+    "tier2-feat1": { pt: "Todos os beneficios do plano Leitor Apoiador", en: "All benefits from Reader Supporter tier" },
+    "tier2-feat2": { pt: "Acesso a repositorios tecnicos e scripts de automacao", en: "Access to private technical repositories and automation scripts" },
+    "tier2-feat3": { pt: "Relatorios detalhados de benchmarks de hardware e software", en: "Detailed hardware and software benchmark reports" },
 
-    "tier3-title": { pt: "Comissões & Consultoria Técnica", en: "Commissions & Tech Consulting" },
+    "tier3-title": { pt: "Comissoes e Consultoria Tecnica", en: "Commissions and Technical Consulting" },
     "tier3-period": { pt: "Sob Demanda", en: "On Demand" },
     "tier3-feat1": { pt: "Desenvolvimento de firmware embarcado (ESP32, C/C++)", en: "Embedded firmware development (ESP32, C/C++)" },
-    "tier3-feat2": { pt: "Automação de processos empresariais e scripts Python", en: "Business process automation and custom Python CLI tools" },
-    "tier3-feat3": { pt: "Consultoria em infraestrutura privada (Docker, IA Local)", en: "Self-hosted infrastructure consulting (Docker, Local AI)" },
+    "tier3-feat2": { pt: "Automacao de processos e scripts Python", en: "Process automation and custom Python CLI tools" },
+    "tier3-feat3": { pt: "Consultoria em infraestrutura privada e servidores locais", en: "Private self-hosted infrastructure and server consulting" },
 
-    "btn-support": { pt: "Apoiar Projeto", en: "Support Project" },
-    "btn-commission": { pt: "Solicitar Comissão", en: "Request Commission" },
-    "pix-title": { pt: "Apoio Instantâneo via Pix", en: "Instant Support via Pix" },
-    "pix-platforms-label": { pt: "Plataformas de Financiamento & Patrocínio:", en: "Funding & Sponsorship Platforms:" },
+    "btn-support": { pt: "Apoiar", en: "Support" },
+    "btn-commission": { pt: "Solicitar Servico", en: "Request Service" },
+    "pix-title": { pt: "Apoio Direto via Pix", en: "Direct Support via Pix" },
+    "pix-platforms-label": { pt: "Plataformas de Apoio:", en: "Support Platforms:" },
     "btn-copy": { pt: "Copiar Chave Pix", en: "Copy Pix Key" },
 
-    // =========================================================================
-    // CERTIFICADOS & FORMAÇÃO
-    // =========================================================================
-    "certs-title": { pt: "Certificados & Conquistas", en: "Certificates & Achievements" },
-    "certs-loading": { pt: "Carregando certificações...", en: "Loading certifications..." },
+    // CERTIFICADOS E FORMACAO
+    "certs-title": { pt: "Certificados e Conquistas", en: "Certificates and Achievements" },
+    "certs-loading": { pt: "Carregando certificacoes...", en: "Loading certifications..." },
     
-    "edu-title": { pt: "Formação Acadêmica", en: "Academic Education" },
-    "edu-card1-title": { pt: "Ensino Médio & Técnico em Eletrônica", en: "High School & Electronics Technical Degree" },
-    "edu-card1-date": { pt: "Concluído em 2024", en: "Completed in 2024" },
-    "edu-card1-place": { pt: "ETEC Júlio de Mesquita", en: "ETEC Júlio de Mesquita" },
+    "edu-title": { pt: "Formacao Academica", en: "Academic Education" },
+    "edu-card1-title": { pt: "Ensino Medio e Tecnico em Eletronica", en: "High School and Electronics Technical Degree" },
+    "edu-card1-date": { pt: "Concluido em 2024", en: "Completed in 2024" },
+    "edu-card1-place": { pt: "ETEC Julio de Mesquita", en: "ETEC Julio de Mesquita" },
     "edu-card1-desc": { 
-        pt: "Aprovado em 23° lugar. Formação sólida em circuitos digitais, microcontroladores, lógica de controle, instrumentação física e bancada analógica.", 
-        en: "Passed in 23rd place. Solid training in digital circuits, microcontrollers, control logic, physical instrumentation, and analog lab work." 
+        pt: "Aprovado em 23 lugar. Formacao em circuitos digitais, microcontroladores, logica de controle e bancada analogica.", 
+        en: "Passed in 23rd place. Training in digital circuits, microcontrollers, control logic, and analog laboratory work." 
     },
     "edu-card2-title": { pt: "Engenharia de Software (Bacharelado)", en: "Software Engineering (B.S.)" },
-    "edu-card2-date": { pt: "Em Andamento (Início em 2026)", en: "In Progress (Started 2026)" },
-    "edu-card2-place": { pt: "Faculdade Anhanguera (EAD)", en: "Anhanguera Faculty" },
+    "edu-card2-date": { pt: "Em Andamento (Inicio em 2026)", en: "In Progress (Started 2026)" },
+    "edu-card2-place": { pt: "Faculdade Anhanguera", en: "Anhanguera Faculty" },
     "edu-card2-desc": { 
-        pt: "Graduação focada no ciclo de vida completo de desenvolvimento de software, arquitetura de sistemas de alta escala, estruturas de dados e metodologias ágeis.", 
-        en: "Degree focused on full software engineering lifecycle, high-scale system architecture, data structures, and agile methodologies." 
+        pt: "Graduacao focada no ciclo completo de desenvolvimento de software, arquitetura de sistemas, estruturas de dados e metodologias ageis.", 
+        en: "Degree focused on full software development lifecycle, system architecture, data structures, and agile methodologies." 
     },
 
-    // =========================================================================
-    // FOOTER
-    // =========================================================================
+    // RODAPE
     "footer-text": { 
-        pt: "&copy; 2026 Daniel Germano. Engenharia de Software, Pesquisa & Produção Autoral.", 
-        en: "&copy; 2026 Daniel Germano. Software Engineering, Research & Creative Writing." 
+        pt: "2026 Daniel Germano. Engenharia de Software, Pesquisa e Producao Autoral.", 
+        en: "2026 Daniel Germano. Software Engineering, Research and Technical Writing." 
     }
 };
 
-// -----------------------------------------------------------------------------
 // IDIOMA (PT / EN)
-// -----------------------------------------------------------------------------
 let currentLang = localStorage.getItem("dg_portfolio_lang") || "pt";
 
 function setLanguage(lang) {
@@ -461,9 +439,7 @@ function setLanguage(lang) {
     updateContent();
 }
 
-// -----------------------------------------------------------------------------
 // TEMA (DARK / LIGHT)
-// -----------------------------------------------------------------------------
 let currentTheme = localStorage.getItem("dg_portfolio_theme") || "dark";
 
 function setTheme(theme) {
@@ -490,7 +466,7 @@ function updateLangButton() {
     const langBtn = document.getElementById("lang-toggle");
     if (langBtn) {
         langBtn.textContent = currentLang === "pt" ? "Traduzir para EN-US" : "Traduzir para PT-BR";
-        langBtn.setAttribute("aria-label", currentLang === "pt" ? "Translate to English" : "Traduzir para Português");
+        langBtn.setAttribute("aria-label", currentLang === "pt" ? "Translate to English" : "Traduzir para Portugues");
     }
 }
 
@@ -522,7 +498,7 @@ function renderCertificates(list, lang) {
         card.innerHTML = `
             <a href="${clickLink}" target="_blank" rel="noopener noreferrer" style="display: block; text-decoration: none; color: inherit;">
                 <div class="cert-img-container">
-                    <img src="${displayImage}" alt="${titleText}" onerror="this.src='https://placehold.co/400x250/141418/ff1e27?text=${encodeURIComponent(activeLang === "pt" ? "Visualizar Certificado" : "View Certificate")}'">
+                    <img src="${displayImage}" alt="${titleText}" loading="lazy" onerror="this.src='https://placehold.co/400x250/141418/ff1e27?text=${encodeURIComponent(activeLang === "pt" ? "Visualizar Certificado" : "View Certificate")}'">
                 </div>
                 <div class="cert-info">
                     <span class="cert-tag">${catText}</span>
@@ -554,80 +530,20 @@ function updateContent() {
     renderCertificates(CERTIFICATES_DATA, currentLang);
 }
 
-// -----------------------------------------------------------------------------
-// DYNAMIC GLASS REFRACTION & PARALLAX SCROLL ENGINE
-// -----------------------------------------------------------------------------
-function initDynamicGlassBackground() {
-    let ticking = false;
-    const orb1 = document.querySelector('.glass-orb-1');
-    const orb2 = document.querySelector('.glass-orb-2');
-    const orb3 = document.querySelector('.glass-orb-3');
-    const overlay = document.querySelector('.glass-refraction-overlay');
-
-    function updateParallax() {
-        const scrollY = window.pageYOffset || document.documentElement.scrollTop;
-        const docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
-        const scrollProgress = scrollY / docHeight;
-
-        // Shift positions dynamically to simulate 3D light refraction through curved frosted glass
-        const p1Y = scrollY * 0.18;
-        const p1X = Math.sin(scrollProgress * Math.PI * 2) * 50;
-        const p2Y = -scrollY * 0.14;
-        const p2X = Math.cos(scrollProgress * Math.PI * 2) * 60;
-        const p3Y = scrollY * 0.08;
-
-        const lightX = 50 + Math.sin(scrollProgress * Math.PI * 2) * 35;
-        const lightY = 30 + Math.cos(scrollProgress * Math.PI * 2) * 25;
-
-        if (orb1) {
-            orb1.style.transform = `translate3d(${p1X}px, ${p1Y}px, 0) scale(${1 + scrollProgress * 0.25})`;
-        }
-        if (orb2) {
-            orb2.style.transform = `translate3d(${p2X}px, ${p2Y}px, 0) scale(${1 + (1 - scrollProgress) * 0.2})`;
-        }
-        if (orb3) {
-            orb3.style.transform = `translate3d(0, ${p3Y}px, 0)`;
-        }
-        if (overlay) {
-            overlay.style.setProperty('--glass-light-x', `${lightX}%`);
-            overlay.style.setProperty('--glass-light-y', `${lightY}%`);
-        }
-
-        ticking = false;
-    }
-
-    function onScroll() {
-        if (!ticking) {
-            window.requestAnimationFrame(updateParallax);
-            ticking = true;
-        }
-    }
-
-    window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('touchmove', onScroll, { passive: true });
-    updateParallax();
-}
-
-// -----------------------------------------------------------------------------
-// SMART RETRACTABLE HEADER & MOBILE NAVIGATION
-// -----------------------------------------------------------------------------
-function initSmartHeader() {
+// NAVEGACAO MOBILE E CABECALHO ULTRA LEVE (ZERO LAG NO SCROLL)
+function initHeaderAndMenu() {
     const header = document.querySelector('header');
     if (!header) return;
 
-    let lastScrollTop = 0;
-    const delta = 15;
-    let isMenuOpen = false;
-
-    // Mobile Hamburger Button Setup
     const headerContainer = header.querySelector('.header-container');
     let menuBtn = document.querySelector('.mobile-menu-btn');
     const nav = document.querySelector('nav');
+    let isMenuOpen = false;
 
     if (headerContainer && !menuBtn && nav) {
         menuBtn = document.createElement('button');
         menuBtn.className = 'mobile-menu-btn';
-        menuBtn.setAttribute('aria-label', 'Menu');
+        menuBtn.setAttribute('aria-label', 'Menu de Navegacao');
         menuBtn.type = 'button';
         menuBtn.innerHTML = '<span></span><span></span><span></span>';
         
@@ -640,7 +556,6 @@ function initSmartHeader() {
 
         headerContainer.appendChild(menuBtn);
 
-        // Close menu on link click
         nav.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 isMenuOpen = false;
@@ -649,7 +564,6 @@ function initSmartHeader() {
             });
         });
 
-        // Close menu on click outside
         document.addEventListener('click', (e) => {
             if (isMenuOpen && !header.contains(e.target)) {
                 isMenuOpen = false;
@@ -659,31 +573,33 @@ function initSmartHeader() {
         });
     }
 
+    // Auto-hide ultra leve sem travamento (utiliza debounce / passive)
+    let lastScroll = 0;
+    let ticking = false;
+
     window.addEventListener('scroll', () => {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                if (currentScroll > 100) {
+                    header.classList.add('header-scrolled');
+                } else {
+                    header.classList.remove('header-scrolled');
+                }
 
-        if (scrollTop > 80) {
-            header.classList.add('header-scrolled');
-        } else {
-            header.classList.remove('header-scrolled');
+                if (currentScroll > lastScroll && currentScroll > 140 && !isMenuOpen) {
+                    header.classList.add('header-hidden');
+                } else if (currentScroll < lastScroll) {
+                    header.classList.remove('header-hidden');
+                }
+                lastScroll = currentScroll;
+                ticking = false;
+            });
+            ticking = true;
         }
-
-        if (Math.abs(lastScrollTop - scrollTop) <= delta) return;
-
-        // Auto-hide when scrolling down, show when scrolling up
-        if (scrollTop > lastScrollTop && scrollTop > 120 && !isMenuOpen) {
-            header.classList.add('header-hidden');
-        } else {
-            header.classList.remove('header-hidden');
-        }
-
-        lastScrollTop = scrollTop;
     }, { passive: true });
 }
 
-// -----------------------------------------------------------------------------
-// DOM INITIALIZATION
-// -----------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
     document.documentElement.setAttribute("data-theme", currentTheme);
 
@@ -696,7 +612,6 @@ document.addEventListener("DOMContentLoaded", () => {
             nav.appendChild(actionsContainer);
         }
 
-        // 1. Botão de Tema (Sem Emojis, sem bordas)
         if (!document.getElementById("theme-toggle")) {
             const themeBtn = document.createElement("button");
             themeBtn.id = "theme-toggle";
@@ -707,7 +622,6 @@ document.addEventListener("DOMContentLoaded", () => {
             actionsContainer.appendChild(themeBtn);
         }
 
-        // 2. Botão de Idioma (Traduzir para EN-US / Traduzir para PT-BR, Sem Emojis, sem bordas)
         if (!document.getElementById("lang-toggle")) {
             const langBtn = document.createElement("button");
             langBtn.id = "lang-toggle";
@@ -722,6 +636,5 @@ document.addEventListener("DOMContentLoaded", () => {
     setLanguage(currentLang);
     setTheme(currentTheme);
     renderCertificates(CERTIFICATES_DATA, currentLang);
-    initDynamicGlassBackground();
-    initSmartHeader();
+    initHeaderAndMenu();
 });

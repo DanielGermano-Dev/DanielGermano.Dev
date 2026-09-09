@@ -17,7 +17,7 @@
 
 ---
 
-## 🌐 Visão Geral & Apresentação
+##  Visão Geral e Apresentação
 
 Bem-vindo ao repositório oficial do portfólio digital e hub de pesquisas de **Daniel Germano Lima dos Santos**. 
 
@@ -27,7 +27,7 @@ Este projeto consolida meu portfólio de projetos, plataforma editorial aberta, 
 
 ---
 
-## ✨ Funcionalidades & Destaques Técnicos
+##  Funcionalidades e Destaques Técnicos
 
 ### 1. 🌌 Background Dinâmico com Efeito *Ambient Glass Refraction & Parallax*
 - Fundo responsivo com orbes de luz ambiente e malha de refração de vidro fosco (*Frosted Glassmorphism*).
@@ -60,17 +60,17 @@ Espaço autoral estruturado com páginas individuais completas e filtros por cat
 - 11 certificações técnicas (ETEC, DIO, Santander Open Academy, Senac) com capas em alta definição e links diretos para documentos em PDF/imagem.
 - Dados unificados em `lang.js` e `data/certificates.json` para renderização imediata, imune a bloqueios de CORS locais (`file:///`).
 
-### 7. 🛒 Geek & Tech Hub | Recomendações e Afiliados
+### 7. 🛒 Geek e Tech Hub | Recomendações e Afiliados
 - 12 itens testados para desenvolvedores e makers: microcontroladores ESP32, kits Arduino, estações de solda, periféricos mecânicos e literatura técnica recomendada (*Clean Code*, *Grokking Algorithms*).
 - Política de transparência detalhada e filtros dinâmicos por categoria.
 
-### 8. ☕ Monetização, Planos de Apoio & Pix Instantâneo
+### 8.  Monetização, Planos de Apoio & Pix Instantâneo
 - Tiers de apoio (*Leitor Apoiador*, *Patrono de Pesquisa*, *Comissões Técnicas*).
 - Botão interativo com cópia em 1 clique para chave Pix (`danielgermano.dev@gmail.com`) e integração a plataformas de fomento (GitHub Sponsors, Apoia.se, Buy Me a Coffee).
 
 ---
 
-## 🛠️ Stacks & Tecnologias
+##  Stacks e Tecnologias
 
 | Camada | Tecnologias |
 | :--- | :--- |
@@ -82,7 +82,7 @@ Espaço autoral estruturado com páginas individuais completas e filtros por cat
 
 ---
 
-## 📂 Estrutura de Diretórios
+##  Estrutura de Diretórios
 
 ```
 MeuSite/
@@ -107,7 +107,7 @@ MeuSite/
 
 ---
 
-## 🚀 Como Executar Localmente
+##  Como Executar Localmente
 
 Como o projeto é construído em padrões nativos Web sem dependência de transpiladores pesados, você pode executá-lo diretamente:
 
@@ -127,7 +127,7 @@ Como o projeto é construído em padrões nativos Web sem dependência de transp
 
 ---
 
-## 📬 Contato & Redes
+##  Contato e Redes
 
 - **WhatsApp:** [+55 (11) 96630-2273](https://wa.me/5511966302273)
 - **E-mail:** [danielgermano.dev@gmail.com](mailto:danielgermano.dev@gmail.com)

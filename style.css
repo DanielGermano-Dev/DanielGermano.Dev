@@ -1,78 +1,5 @@
 
-/* ==========================================================================
-   DYNAMIC AMBIENT GLASS & PARALLAX BACKGROUND
-   ========================================================================== */
 
-.glass-bg-mesh {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    z-index: -1;
-    overflow: hidden;
-    background: var(--bg-color);
-    transition: background-color 0.4s ease;
-}
-
-.glass-orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.25;
-    mix-blend-mode: screen;
-    will-change: transform, opacity;
-    transition: opacity 0.5s ease;
-    pointer-events: none;
-}
-
-[data-theme="light"] .glass-orb {
-    opacity: 0.14;
-    mix-blend-mode: multiply;
-    filter: blur(95px);
-}
-
-.glass-orb-1 {
-    width: 650px;
-    height: 650px;
-    top: -120px;
-    left: -80px;
-    background: radial-gradient(circle, var(--accent-red) 0%, rgba(255, 30, 39, 0) 70%);
-}
-
-.glass-orb-2 {
-    width: 750px;
-    height: 750px;
-    top: 35%;
-    right: -150px;
-    background: radial-gradient(circle, rgba(255, 30, 39, 0.45) 0%, rgba(220, 20, 60, 0.15) 50%, rgba(0, 0, 0, 0) 70%);
-}
-
-.glass-orb-3 {
-    width: 550px;
-    height: 550px;
-    bottom: -80px;
-    left: 25%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(255, 30, 39, 0.2) 50%, rgba(0, 0, 0, 0) 75%);
-}
-
-.glass-refraction-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    z-index: -1;
-    background: radial-gradient(
-        circle at var(--glass-light-x, 50%) var(--glass-light-y, 30%),
-        rgba(255, 255, 255, 0.05) 0%,
-        transparent 65%
-    );
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(1px);
-}
 
 /* ==========================================================================
    PORTFÓLIO PESSOAL - DANIEL GERMANO
@@ -141,14 +68,14 @@
 body {
     background-color: var(--bg-color);
     background-image: 
-        radial-gradient(circle at 10% 20%, var(--accent-red-dim) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, var(--accent-red-dim) 0%, transparent 40%);
+        radial-gradient(circle at 15% 15%, var(--accent-red-dim) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, var(--accent-red-dim) 0%, transparent 40%);
     background-attachment: fixed;
     color: var(--text-color);
     font-family: 'Outfit', sans-serif;
     line-height: 1.65;
     overflow-x: hidden;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 a {
@@ -181,11 +108,9 @@ header {
     left: 0;
     width: 100%;
     background-color: var(--header-bg);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
-    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.25s ease, background-color 0.2s ease;
     will-change: transform;
 }
 
@@ -1839,5 +1764,26 @@ footer {
     .tier-card,
     .contact-info-card {
         padding: 18px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    header {
+        background-color: var(--header-bg);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+
+    nav {
+        background: var(--card-bg);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .project-card, .article-card, .tier-card, .contact-info-card, .certificate-card, .affiliate-card {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
     }
 }
