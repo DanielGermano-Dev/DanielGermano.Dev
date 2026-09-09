@@ -1,4 +1,4 @@
-// lang.js - Portfólio Daniel Germano Multi-language & Theme Script (PT / EN | Dark / Light)
+// lang.js - Portfólio Daniel Germano Multi-language & Interactive Engine (PT / EN | Dark / Light)
 
 const CERTIFICATES_DATA = [
     {
@@ -77,7 +77,7 @@ const CERTIFICATES_DATA = [
         title: { pt: "Santander Open Academy - Introdução ao Desenvolvimento em Java", en: "Santander Open Academy - Intro to Java Development" },
         issuer: { pt: "DIO e Santander Open Academy", en: "DIO & Santander Open Academy" },
         date: { pt: "2026", en: "2026" },
-        image: "medias/certificates/CertificadoIntroducaoJava.pdf",
+        image: "medias/certificates/CertificadoIntroducaoJava.png",
         link: "medias/certificates/CertificadoIntroducaoJava.pdf",
         category: { pt: "Back-End", en: "Back-End" }
     },
@@ -103,6 +103,7 @@ const translations = {
     "nav-monetization": { pt: "Comissões & Apoio", en: "Commissions & Support" },
     "nav-certs": { pt: "Certificados", en: "Certificates" },
     "nav-edu": { pt: "Formação", en: "Education" },
+    "article-back-btn": { pt: "Voltar para o Editorial & Ensaios", en: "Back to Editorial & Essays" },
 
     // =========================================================================
     // HERO
@@ -149,7 +150,7 @@ const translations = {
     "skills-cat4": { pt: "Design & Ferramentas", en: "Design & Tools" },
 
     // =========================================================================
-    // PROJETOS (HEADER & FILTROS)
+    // PROJETOS
     // =========================================================================
     "projects-title": { pt: "Projetos & Portfólio", en: "Projects & Portfolio" },
     "projects-desc": { pt: "Projetos autorais e soluções reais desenvolvidas com foco em eficiência, estabilidade e código limpo.", en: "Original projects and real-world solutions developed with a focus on efficiency, stability, and clean code." },
@@ -159,7 +160,6 @@ const translations = {
     "proj-filter-ai": { pt: "IA Local & Software", en: "Local AI & Software" },
     "proj-filter-games": { pt: "Jogos & Web", en: "Games & Web" },
 
-    // PROJETOS (INDIVIDUAIS)
     "proj1-tag": { pt: "IA & Automação", en: "AI & Automation" },
     "proj1-status": { pt: "Ativo / Produção", en: "Active / Production" },
     "proj1-desc": { 
@@ -554,6 +554,136 @@ function updateContent() {
     renderCertificates(CERTIFICATES_DATA, currentLang);
 }
 
+// -----------------------------------------------------------------------------
+// DYNAMIC GLASS REFRACTION & PARALLAX SCROLL ENGINE
+// -----------------------------------------------------------------------------
+function initDynamicGlassBackground() {
+    let ticking = false;
+    const orb1 = document.querySelector('.glass-orb-1');
+    const orb2 = document.querySelector('.glass-orb-2');
+    const orb3 = document.querySelector('.glass-orb-3');
+    const overlay = document.querySelector('.glass-refraction-overlay');
+
+    function updateParallax() {
+        const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+        const docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        const scrollProgress = scrollY / docHeight;
+
+        // Shift positions dynamically to simulate 3D light refraction through curved frosted glass
+        const p1Y = scrollY * 0.18;
+        const p1X = Math.sin(scrollProgress * Math.PI * 2) * 50;
+        const p2Y = -scrollY * 0.14;
+        const p2X = Math.cos(scrollProgress * Math.PI * 2) * 60;
+        const p3Y = scrollY * 0.08;
+
+        const lightX = 50 + Math.sin(scrollProgress * Math.PI * 2) * 35;
+        const lightY = 30 + Math.cos(scrollProgress * Math.PI * 2) * 25;
+
+        if (orb1) {
+            orb1.style.transform = `translate3d(${p1X}px, ${p1Y}px, 0) scale(${1 + scrollProgress * 0.25})`;
+        }
+        if (orb2) {
+            orb2.style.transform = `translate3d(${p2X}px, ${p2Y}px, 0) scale(${1 + (1 - scrollProgress) * 0.2})`;
+        }
+        if (orb3) {
+            orb3.style.transform = `translate3d(0, ${p3Y}px, 0)`;
+        }
+        if (overlay) {
+            overlay.style.setProperty('--glass-light-x', `${lightX}%`);
+            overlay.style.setProperty('--glass-light-y', `${lightY}%`);
+        }
+
+        ticking = false;
+    }
+
+    function onScroll() {
+        if (!ticking) {
+            window.requestAnimationFrame(updateParallax);
+            ticking = true;
+        }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('touchmove', onScroll, { passive: true });
+    updateParallax();
+}
+
+// -----------------------------------------------------------------------------
+// SMART RETRACTABLE HEADER & MOBILE NAVIGATION
+// -----------------------------------------------------------------------------
+function initSmartHeader() {
+    const header = document.querySelector('header');
+    if (!header) return;
+
+    let lastScrollTop = 0;
+    const delta = 15;
+    let isMenuOpen = false;
+
+    // Mobile Hamburger Button Setup
+    const headerContainer = header.querySelector('.header-container');
+    let menuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('nav');
+
+    if (headerContainer && !menuBtn && nav) {
+        menuBtn = document.createElement('button');
+        menuBtn.className = 'mobile-menu-btn';
+        menuBtn.setAttribute('aria-label', 'Menu');
+        menuBtn.type = 'button';
+        menuBtn.innerHTML = '<span></span><span></span><span></span>';
+        
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            isMenuOpen = !isMenuOpen;
+            menuBtn.classList.toggle('active', isMenuOpen);
+            nav.classList.toggle('nav-open', isMenuOpen);
+        });
+
+        headerContainer.appendChild(menuBtn);
+
+        // Close menu on link click
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                isMenuOpen = false;
+                menuBtn.classList.remove('active');
+                nav.classList.remove('nav-open');
+            });
+        });
+
+        // Close menu on click outside
+        document.addEventListener('click', (e) => {
+            if (isMenuOpen && !header.contains(e.target)) {
+                isMenuOpen = false;
+                menuBtn.classList.remove('active');
+                nav.classList.remove('nav-open');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > 80) {
+            header.classList.add('header-scrolled');
+        } else {
+            header.classList.remove('header-scrolled');
+        }
+
+        if (Math.abs(lastScrollTop - scrollTop) <= delta) return;
+
+        // Auto-hide when scrolling down, show when scrolling up
+        if (scrollTop > lastScrollTop && scrollTop > 120 && !isMenuOpen) {
+            header.classList.add('header-hidden');
+        } else {
+            header.classList.remove('header-hidden');
+        }
+
+        lastScrollTop = scrollTop;
+    }, { passive: true });
+}
+
+// -----------------------------------------------------------------------------
+// DOM INITIALIZATION
+// -----------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
     document.documentElement.setAttribute("data-theme", currentTheme);
 
@@ -592,4 +722,6 @@ document.addEventListener("DOMContentLoaded", () => {
     setLanguage(currentLang);
     setTheme(currentTheme);
     renderCertificates(CERTIFICATES_DATA, currentLang);
+    initDynamicGlassBackground();
+    initSmartHeader();
 });

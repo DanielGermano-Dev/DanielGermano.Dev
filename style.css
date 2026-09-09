@@ -1,3 +1,79 @@
+
+/* ==========================================================================
+   DYNAMIC AMBIENT GLASS & PARALLAX BACKGROUND
+   ========================================================================== */
+
+.glass-bg-mesh {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+    background: var(--bg-color);
+    transition: background-color 0.4s ease;
+}
+
+.glass-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.25;
+    mix-blend-mode: screen;
+    will-change: transform, opacity;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+[data-theme="light"] .glass-orb {
+    opacity: 0.14;
+    mix-blend-mode: multiply;
+    filter: blur(95px);
+}
+
+.glass-orb-1 {
+    width: 650px;
+    height: 650px;
+    top: -120px;
+    left: -80px;
+    background: radial-gradient(circle, var(--accent-red) 0%, rgba(255, 30, 39, 0) 70%);
+}
+
+.glass-orb-2 {
+    width: 750px;
+    height: 750px;
+    top: 35%;
+    right: -150px;
+    background: radial-gradient(circle, rgba(255, 30, 39, 0.45) 0%, rgba(220, 20, 60, 0.15) 50%, rgba(0, 0, 0, 0) 70%);
+}
+
+.glass-orb-3 {
+    width: 550px;
+    height: 550px;
+    bottom: -80px;
+    left: 25%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(255, 30, 39, 0.2) 50%, rgba(0, 0, 0, 0) 75%);
+}
+
+.glass-refraction-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+    background: radial-gradient(
+        circle at var(--glass-light-x, 50%) var(--glass-light-y, 30%),
+        rgba(255, 255, 255, 0.05) 0%,
+        transparent 65%
+    );
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+}
+
 /* ==========================================================================
    PORTFÓLIO PESSOAL - DANIEL GERMANO
    Identidade Visual: Preto Profundo / Off-White, Vermelho Carmesim & Branco
@@ -105,11 +181,21 @@ header {
     left: 0;
     width: 100%;
     background-color: var(--header-bg);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
+}
+
+header.header-hidden {
+    transform: translateY(-100%);
+    box-shadow: none;
+}
+
+header.header-scrolled {
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.35);
 }
 
 .header-container {
@@ -136,6 +222,10 @@ header {
 
 .logo:hover {
     transform: scale(1.05);
+}
+
+.mobile-menu-btn {
+    display: none;
 }
 
 nav {
@@ -1516,35 +1606,105 @@ footer {
 
 /* 5. SMARTPHONES & TELAS MÓVEIS (Até 768px) */
 @media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        gap: 14px;
-        padding: 14px 18px;
+.header-container {
+        padding: 12px 18px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
     }
-    
-    .logo {
-        font-size: 1.6rem;
-    }
-    
-    nav {
-        width: 100%;
+
+    .mobile-menu-btn {
         display: flex;
-        gap: 10px;
-        overflow-x: auto;
-        white-space: nowrap;
-        padding-bottom: 6px;
-        justify-content: flex-start;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 6px;
+        width: 38px;
+        height: 38px;
+        border-radius: 8px;
+        z-index: 1001;
     }
-    
-    nav::-webkit-scrollbar {
-        display: none;
+
+    .mobile-menu-btn span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: var(--text-color);
+        border-radius: 2px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .mobile-menu-btn.active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .mobile-menu-btn.active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    nav {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: var(--header-bg);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+        padding: 16px 20px 24px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        transform: translateY(-150%);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, visibility 0.3s;
+        z-index: 999;
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+    }
+
+    nav.nav-open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
     }
 
     nav a {
-        font-size: 0.88rem;
-        padding: 4px 6px;
+        font-size: 0.95rem;
+        padding: 10px 14px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.04);
+        display: block;
+        text-align: left;
+    }
+
+    .nav-actions {
+        margin-left: 0;
+        border-left: none;
+        border-top: 1px solid var(--border-color);
+        padding-top: 12px;
+        padding-left: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    #lang-toggle, #theme-toggle {
+        width: 100%;
+        justify-content: center;
+        padding: 10px;
+        font-size: 0.9rem;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
     }
     
     .hero {
